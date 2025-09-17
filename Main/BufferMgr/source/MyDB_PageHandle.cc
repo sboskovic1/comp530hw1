@@ -5,7 +5,12 @@
 #include <memory>
 #include "MyDB_PageHandle.h"
 
+#define INACTIVE 0
+#define ACTIVE 1
+#define KILLED 2
+
 int refCount = 0;
+int active = INACTIVE;
 
 void *MyDB_PageHandleBase :: getBytes () {
 	return nullptr;

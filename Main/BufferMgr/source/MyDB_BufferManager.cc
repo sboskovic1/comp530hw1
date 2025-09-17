@@ -6,7 +6,7 @@
 #include "MyDB_LRUNode.cc"
 #include <string>
 #include <unordered_map>
-#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
@@ -18,9 +18,8 @@ void *buffer;
 MyDB_LRUNode *head;
 MyDB_LRUNode *tail;
 unordered_map<MyDB_TablePtr, unordered_map<long, MyDB_PageHandle>> tables;
-unordered_set<int> free;
+vector<int> free_pages;
 unordered_map<MyDB_LRUNode, long> location_in_memory;
-
 
 MyDB_PageHandle MyDB_BufferManager :: getPage (MyDB_TablePtr, long) {
 	return nullptr;		
@@ -49,16 +48,13 @@ MyDB_BufferManager :: MyDB_BufferManager (size_t pageSize, size_t numPages, stri
     usedPages = 0;
     head = nullptr;
     tail = nullptr;
-    tables = {};    
-    free = {};
-    location_in_memory = {};
-    for (size_t i = 0; i < numPages; i++) {
-        free.insert(i);
+    for (size_t i = numPages - 1; i >= 0; i--) {
+        free_pages.push_back(i); // Add all pages to free list
     }
 }
 
 MyDB_BufferManager :: ~MyDB_BufferManager () {
-    // Write to tempfile before closing
+    // Loop through LRU cache and write all dirty pages to disk or temp
     tempFile.close();
 }
 	
