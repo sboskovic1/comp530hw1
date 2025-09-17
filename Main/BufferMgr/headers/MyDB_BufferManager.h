@@ -6,14 +6,10 @@
 #include "MyDB_LRUNode.h"
 #include "MyDB_TempFile.h"
 #include "MyDB_Table.h"
+#include <unordered_map>
 #include <fstream>
 
 using namespace std;
-
-typedef struct {
-    MyDB_TablePtr table;
-    long pageIndex;
-} DiskLocation;
 
 class MyDB_BufferManager {
 
@@ -28,6 +24,7 @@ public:
     MyDB_LRUNode *tail;
 
     vector<int> freePages;
+    unordered_map<MyDB_TablePtr, unordered_map<long, MyDB_LRUNode>> table; // Maps table and page index to LRU node
 
 	// THESE METHODS MUST APPEAR AND THE PROTOTYPES CANNOT CHANGE!
 

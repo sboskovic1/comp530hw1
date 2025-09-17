@@ -3,12 +3,20 @@
 #define PAGE_HANDLE_H
 
 #include <memory>
+#include "MyDB_Table.h"
 #include "MyDB_TempFile.h"
 
 // page handles are basically smart pointers
 using namespace std;
 class MyDB_PageHandleBase;
 typedef shared_ptr <MyDB_PageHandleBase> MyDB_PageHandle;
+
+typedef struct {
+    MyDB_TablePtr table;
+    MyDB_TempFile tempFile;
+    long pageIndex;
+    void * buf;
+} Location;
 
 class MyDB_PageHandleBase {
 
@@ -30,6 +38,8 @@ int active; // active/inactive
 int pinned; // pinned/unpinned
 int permanent; // temp/disk
 int dirty; // clean/dirty
+
+Location location; // location of page
 
 public:
 

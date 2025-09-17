@@ -17,6 +17,8 @@ class MyDB_TempFile {
 
         ~MyDB_TempFile();
 
+        MyDB_TempFile() = default;
+
         // Write a page to temp memory when it is ejected from cache
         void writePage(void * buf, size_t pageNum);
 
@@ -29,12 +31,6 @@ class MyDB_TempFile {
         // Clear a page from temp memory when it is no longer needed, freeing up its space
         void clearPage(size_t pageNum);
 
-
 };
-
-
-
-
-
 
 #endif
