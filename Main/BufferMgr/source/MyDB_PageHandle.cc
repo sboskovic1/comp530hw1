@@ -5,12 +5,7 @@
 #include <memory>
 #include "MyDB_PageHandle.h"
 
-#define INACTIVE 0
-#define ACTIVE 1
-#define KILLED 2
-
-int refCount = 0;
-int active = INACTIVE;
+using namespace std;
 
 void *MyDB_PageHandleBase :: getBytes () {
 	return nullptr;
@@ -19,19 +14,18 @@ void *MyDB_PageHandleBase :: getBytes () {
 void MyDB_PageHandleBase :: wroteBytes () {
 }
 
+
+MyDB_PageHandleBase :: MyDB_PageHandleBase () {
+    this->refCount = 0;
+    this->dirty = CLEAN;
+    this->active = INACTIVE;
+    this->pinned = UNPINNED;
+}
+
 MyDB_PageHandleBase :: ~MyDB_PageHandleBase () {
+
 }
 
-void MyDB_PageHandleBase :: addRef () {
-	refCount++;
-}
-
-void MyDB_PageHandleBase :: release () {
-	refCount--;
-	if (refCount == 0) {
-		delete this;
-	}
-}
 
 #endif
 

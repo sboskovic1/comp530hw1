@@ -3,6 +3,7 @@
 #define PAGE_HANDLE_H
 
 #include <memory>
+#include "MyDB_TempFile.h"
 
 // page handles are basically smart pointers
 using namespace std;
@@ -10,6 +11,25 @@ class MyDB_PageHandleBase;
 typedef shared_ptr <MyDB_PageHandleBase> MyDB_PageHandle;
 
 class MyDB_PageHandleBase {
+
+#define INACTIVE 0
+#define ACTIVE 1
+
+#define TEMP 0
+#define DISK 1
+
+#define UNPINNED 0
+#define PINNED 1
+
+#define CLEAN 0
+#define DIRTY 1
+
+int refCount;
+
+int active; // active/inactive
+int pinned; // pinned/unpinned
+int permanent; // temp/disk
+int dirty; // clean/dirty
 
 public:
 
@@ -25,6 +45,8 @@ public:
 	// called, then the page will never be marked as dirty, and the page
 	// will never be written to disk. 
 	void wroteBytes ();
+
+    MyDB_PageHandleBase ();
 
 	// There are no more references to the handle when this is called...
 	// this should decrmeent a reference count to the number of handles
