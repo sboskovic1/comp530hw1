@@ -4,6 +4,7 @@
 
 #include "MyDB_PageHandle.h"
 #include "MyDB_Table.h"
+#include <fstream>
 
 using namespace std;
 
@@ -40,15 +41,15 @@ public:
 	// 1) the size of each page is pageSize 
 	// 2) the number of pages managed by the buffer manager is numPages;
 	// 3) temporary pages are written to the file tempFile
-	MyDB_BufferManager (size_t pageSize, size_t numPages, string tempFile);
+	MyDB_BufferManager (size_t pageSize, size_t numPages, string fileName);        
 	
 	// when the buffer manager is destroyed, all of the dirty pages need to be
 	// written back to disk, any necessary data needs to be written to the catalog,
 	// and any temporary files need to be deleted
-	~MyDB_BufferManager ();
+	~MyDB_BufferManager ();    
 
 	// FEEL FREE TO ADD ADDITIONAL PUBLIC METHODS 
-
+    
 private:
 
 	// YOUR STUFF HERE
