@@ -13,7 +13,7 @@ typedef shared_ptr <MyDB_PageHandleBase> MyDB_PageHandle;
 
 typedef struct {
     MyDB_TablePtr table;
-    MyDB_TempFile tempFile;
+    MyDB_TempFile * tempFile;
     long pageIndex;
     void * buf;
 } Location;
@@ -32,16 +32,16 @@ class MyDB_PageHandleBase {
 #define CLEAN 0
 #define DIRTY 1
 
-int refCount;
-
-int active; // active/inactive
-int pinned; // pinned/unpinned
-int permanent; // temp/disk
-int dirty; // clean/dirty
-
-Location location; // location of page
-
 public:
+
+    int refCount;
+
+    int active; // active/inactive
+    int pinned; // pinned/unpinned
+    int permanent; // temp/disk
+    int dirty; // clean/dirty
+
+    Location location; // location of page
 
 	// THESE METHODS MUST BE IMPLEMENTED WITHOUT CHANGING THE DEFINITION
 
@@ -66,6 +66,8 @@ public:
 	~MyDB_PageHandleBase ();
 
 	// FEEL FREE TO ADD ADDITIONAL PUBLIC METHODS
+
+    void writeBack();
 
 private:
 

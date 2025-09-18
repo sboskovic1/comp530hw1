@@ -20,10 +20,24 @@ MyDB_PageHandleBase :: MyDB_PageHandleBase () {
     this->dirty = CLEAN;
     this->active = INACTIVE;
     this->pinned = UNPINNED;
+    this->location.buf = nullptr;
+    this->location.pageIndex = -1;
+    this->location.table = nullptr;
 }
 
 MyDB_PageHandleBase :: ~MyDB_PageHandleBase () {
 
+}
+
+void MyDB_PageHandleBase :: writeBack() {
+    // Write back to disk or temp if dirty
+    if (this->dirty == DIRTY) {
+        if (this->permanent == DISK) {
+            // Write to disk
+        } else {
+            // Write to temp
+        }
+    }
 }
 
 

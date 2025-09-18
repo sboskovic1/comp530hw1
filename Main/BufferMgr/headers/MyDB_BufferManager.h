@@ -15,16 +15,15 @@ class MyDB_BufferManager {
 
 public:
 
-    std::ofstream tempFile;
+    MyDB_TempFile * tempFile;
     size_t pageSize;
     size_t numPages;
-    size_t usedPages;
     void *buffer;
     MyDB_LRUNode *head;
     MyDB_LRUNode *tail;
 
     vector<int> freePages;
-    unordered_map<MyDB_TablePtr, unordered_map<long, MyDB_LRUNode>> table; // Maps table and page index to LRU node
+    unordered_map<MyDB_TablePtr, unordered_map<long, MyDB_PageHandle>> table; // Maps table and page index to page handle
 
 	// THESE METHODS MUST APPEAR AND THE PROTOTYPES CANNOT CHANGE!
 
@@ -63,7 +62,13 @@ public:
 	~MyDB_BufferManager ();    
 
 	// FEEL FREE TO ADD ADDITIONAL PUBLIC METHODS 
-    
+
+    void * requestBufferSpace();
+
+    void clear (void * page);
+
+    MyDB_LRUNode * findNode(MyDB_PageHandle pageHandle);
+
 private:
 
 	// YOUR STUFF HERE

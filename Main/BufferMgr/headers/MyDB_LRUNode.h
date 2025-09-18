@@ -6,15 +6,15 @@
 using namespace std;
 class  MyDB_LRUNode {
 
-
-    MyDB_PageHandle pageHandle;
-    MyDB_LRUNode *prev;
-    MyDB_LRUNode *next;
-
     public:
+
+        MyDB_PageHandle pageHandle;
+        MyDB_LRUNode *prev;
+        MyDB_LRUNode *next;
+        
         MyDB_LRUNode(MyDB_PageHandle pageHandle);
 
-    MyDB_LRUNode * eject();
+        MyDB_LRUNode * eject();
 
 };
 

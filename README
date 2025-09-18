@@ -1,3 +1,12 @@
 Collaborators:
 Tianjian Li - tl107
 Stefan Boskovic - sb121
+
+Notes: 
+Might want to change how pinned pages work in buffer manager, would be much more complex but technically I think we should 
+not actually allocate a page until the page tries to write, but this would be really complicated. Maybe ask on piazza.
+
+Need to clarify exactly what constitutes as a "use." This creates a problem when unpinning a page, as when putting back in 
+the LRU cache it might not necessarily have been "used" more recently than anything there. This would require keeping some sort of clock,
+but if unpinning counts as a use we can proceed as expected. Might also not even matter since I'm not sure how they would even test 
+whether a page is in the buffer.

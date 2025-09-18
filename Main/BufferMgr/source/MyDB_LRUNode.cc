@@ -5,8 +5,13 @@
 
 using namespace std;
 
+MyDB_LRUNode :: MyDB_LRUNode(MyDB_PageHandle pageHandle) {
+    this->pageHandle = pageHandle;
+    this->prev = nullptr;
+    this->next = nullptr;
+}
 
-MyDB_LRUNode * eject() {
+MyDB_LRUNode * MyDB_LRUNode :: eject() {
     return nullptr;
 }
 
