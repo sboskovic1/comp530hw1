@@ -69,6 +69,8 @@ public:
 
     MyDB_LRUNode * findNode(MyDB_PageHandle pageHandle);
 
+    void printBuffer();
+
 private:
 
 	// YOUR STUFF HERE

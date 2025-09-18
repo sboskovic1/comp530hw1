@@ -3,6 +3,7 @@
 #define PAGE_HANDLE_C
 
 #include <memory>
+#include <iostream>
 #include "MyDB_PageHandle.h"
 
 using namespace std;
@@ -38,6 +39,15 @@ void MyDB_PageHandleBase :: writeBack() {
             // Write to temp
         }
     }
+}
+
+void MyDB_PageHandleBase :: printHandle() {
+    if (this->permanent == TEMP) {
+        std::cout << "Temp Page " << this->location.pageIndex << std::endl;
+    } else {
+        std::cout << "Table: " << this->location.table->getName() << " " << this->location.pageIndex << std::endl;
+    }
+    std::cout << "ACTIVE: " << this->active << " PINNED: " << this->pinned << " DIRTY: " << this->dirty << std::endl << std::endl;
 }
 
 

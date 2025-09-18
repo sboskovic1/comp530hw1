@@ -69,6 +69,8 @@ public:
 
     void writeBack();
 
+    void printHandle();
+
 private:
 
 	// YOUR CODE HERE

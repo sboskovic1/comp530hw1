@@ -3,6 +3,7 @@
 #define BUFFER_MGR_C
 
 #include "MyDB_BufferManager.h"
+#include <iostream>
 #include <unordered_map>
 #include <vector>
 
@@ -65,7 +66,7 @@ MyDB_PageHandle MyDB_BufferManager :: getPinnedPage (MyDB_TablePtr tablePtr, lon
     void * buf = this->requestBufferSpace();
     newPageHandle->location.buf = buf;
     newPageHandle->refCount++;
-    return newPageHandle;	
+    return newPageHandle;
 }
 
 MyDB_PageHandle MyDB_BufferManager :: getPinnedPage () {
@@ -117,13 +118,14 @@ MyDB_BufferManager :: MyDB_BufferManager (size_t pageSize, size_t numPages, stri
     this->buffer = malloc(pageSize * numPages);
     this->head = nullptr;
     this->tail = nullptr;
-    for (size_t i = numPages - 1; i >= 0; i--) {
+    for (int i = numPages - 1; i >= 0; i--) {
         this->freePages.push_back(i); // Add all pages to free list
     }
 }
 
 MyDB_BufferManager :: ~MyDB_BufferManager () {
     // Loop through LRU cache and write all dirty pages to disk or temp
+    std::cout << "Destroying Buffer Manager" << std::endl;
     MyDB_LRUNode * curr = head;
     while (curr != nullptr) {
         curr->pageHandle->writeBack();
@@ -146,6 +148,27 @@ MyDB_LRUNode * MyDB_BufferManager :: findNode(MyDB_PageHandle pageHandle) {
         curr = curr->next;
     }
     return nullptr;
+}
+
+void MyDB_BufferManager :: printBuffer() {
+    std::cout << "Printing Buffer State: " << std::endl << std::endl;
+    std::cout << "Free Pages: " << this->numPages << std::endl;
+    for (int f : freePages) {
+        std::cout << f << " ";
+    }
+    std::cout << std::endl << "LRU Cache: " << std::endl;
+    MyDB_LRUNode * curr = this->head;
+    while (curr != nullptr) {
+        MyDB_PageHandle pageHandle = curr->pageHandle;
+        if (pageHandle->permanent == TEMP) {
+            std::cout << "Temp Page " << pageHandle->location.pageIndex << std::endl;
+        } else {
+            std::cout << "Table: " << pageHandle->location.table->getName() << " " << pageHandle->location.pageIndex << std::endl;
+        }
+        std::cout << "ACTIVE: " << pageHandle->active << " PINNED: " << pageHandle->pinned << " DIRTY: " << pageHandle->dirty << std::endl << std::endl;
+        curr = curr->next;
+    }
+    std::cout << std::endl << "End of Buffer State" << std::endl << std::endl;
 }
 
 	
