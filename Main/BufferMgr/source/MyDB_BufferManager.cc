@@ -49,7 +49,11 @@ MyDB_PageHandle MyDB_BufferManager :: getPage () {
 }
 
 MyDB_PageHandle MyDB_BufferManager :: getPinnedPage (MyDB_TablePtr tablePtr, long idx) {
-    // Don't forget case where it already exists in buffer
+    if (this->pinned == this->numPages) {
+        return nullptr; // All pages are pinned, cannot pin another
+    }
+    // TOOD: Don't forget case where it already exists in buffer
+
     if (this->table.find(tablePtr) != this->table.end()) {
         if (this->table[tablePtr].find(idx) != this->table[tablePtr].end()) {
             MyDB_PageHandle pageHandle = this->table[tablePtr][idx];
@@ -137,6 +141,9 @@ void * MyDB_BufferManager :: requestBufferSpace() {
         freePages.pop_back();
         return buf;
     } else {
+        // Eject the most recent page
+        // TODO: What if the buffer is full with all pinned pages? Do we return just return false?
+
         MyDB_PageHandle * node = &tail->eject()->pageHandle;
         (*node)->writeBack();
         this->clear((*node)->location.buf);
@@ -177,6 +184,9 @@ void MyDB_BufferManager :: clear (void * page) {
     // Clear page to be replaced in buffer
 }
 
+// Should we implement a hashtable for O(1) lookup to find a pageHandle? I know there was an 
+// issue with making a c++ hashtable. The big test case is just a buffer size of 16 tho so maybe
+// it won't matter
 MyDB_LRUNode * MyDB_BufferManager :: findNode(MyDB_PageHandle pageHandle) {
     MyDB_LRUNode * curr = this->head;
     while (curr != nullptr) {
