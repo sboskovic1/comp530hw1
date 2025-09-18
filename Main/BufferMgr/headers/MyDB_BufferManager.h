@@ -21,6 +21,7 @@ public:
     void *buffer;
     MyDB_LRUNode *head;
     MyDB_LRUNode *tail;
+    int pinned;
 
     vector<int> freePages;
     unordered_map<MyDB_TablePtr, unordered_map<long, MyDB_PageHandle>> table; // Maps table and page index to page handle

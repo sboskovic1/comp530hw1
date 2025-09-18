@@ -3,6 +3,7 @@
 #define PAGE_HANDLE_H
 
 #include <memory>
+#include <functional>
 #include "MyDB_Table.h"
 #include "MyDB_TempFile.h"
 
@@ -41,6 +42,8 @@ public:
     int permanent; // temp/disk
     int dirty; // clean/dirty
 
+    std::function<void*()> getBufferSpace; // Passed down from buffer manager to request buffer space
+
     Location location; // location of page
 
 	// THESE METHODS MUST BE IMPLEMENTED WITHOUT CHANGING THE DEFINITION
@@ -56,8 +59,6 @@ public:
 	// will never be written to disk. 
 	void wroteBytes ();
 
-    MyDB_PageHandleBase ();
-
 	// There are no more references to the handle when this is called...
 	// this should decrmeent a reference count to the number of handles
 	// to the particular page that it references.  If the number of 
@@ -66,6 +67,8 @@ public:
 	~MyDB_PageHandleBase ();
 
 	// FEEL FREE TO ADD ADDITIONAL PUBLIC METHODS
+
+    MyDB_PageHandleBase ();
 
     void writeBack();
 

@@ -25,6 +25,9 @@ MyDB_PageHandle MyDB_BufferManager :: getPage (MyDB_TablePtr tablePtr, long idx)
     newPageHandle->location.pageIndex = idx;
     newPageHandle->refCount++;
     newPageHandle->permanent = DISK;
+    newPageHandle->getBufferSpace = [this]() -> void* {
+        return this->requestBufferSpace();
+    };
     return newPageHandle;
 }
 
@@ -33,14 +36,23 @@ MyDB_PageHandle MyDB_BufferManager :: getPage () {
     newPageHandle->refCount++;
     newPageHandle->permanent = TEMP;
     newPageHandle->location.tempFile = this->tempFile;
+    newPageHandle->getBufferSpace = [this]() -> void* {
+        return this->requestBufferSpace();
+    };
     return newPageHandle;
 }
 
 MyDB_PageHandle MyDB_BufferManager :: getPinnedPage (MyDB_TablePtr tablePtr, long idx) {
+    if (this->pinned == this->numPages) {
+        return nullptr; // All pages are pinned, cannot pin another
+    }
     // Don't forget case where it already exists in buffer
     if (this->table.find(tablePtr) != this->table.end()) {
         if (this->table[tablePtr].find(idx) != this->table[tablePtr].end()) {
             MyDB_PageHandle pageHandle = this->table[tablePtr][idx];
+            if (pageHandle->pinned != PINNED) {
+               this->pinned++;
+            }
             pageHandle->pinned = PINNED;
             MyDB_LRUNode * node = findNode(pageHandle);
             if (node == nullptr) {
@@ -61,23 +73,29 @@ MyDB_PageHandle MyDB_BufferManager :: getPinnedPage (MyDB_TablePtr tablePtr, lon
     newPageHandle->location.table = tablePtr;
     newPageHandle->location.pageIndex = idx;
     newPageHandle->pinned = PINNED;
-    newPageHandle->active = ACTIVE;
+    newPageHandle->active = INACTIVE;
     newPageHandle->permanent = DISK;
-    void * buf = this->requestBufferSpace();
-    newPageHandle->location.buf = buf;
     newPageHandle->refCount++;
+    newPageHandle->getBufferSpace = [this]() -> void* {
+        return this->requestBufferSpace();
+    };
     return newPageHandle;
 }
 
 MyDB_PageHandle MyDB_BufferManager :: getPinnedPage () {
+    if (this->pinned == this->numPages) {
+        return nullptr; // All pages are pinned, cannot pin another
+    }
 	MyDB_PageHandle newPageHandle = make_shared<MyDB_PageHandleBase>();
     newPageHandle->pinned = PINNED;
-    newPageHandle->active = ACTIVE;
+    newPageHandle->active = INACTIVE;
     newPageHandle->permanent = TEMP;
-    void * buf = this->requestBufferSpace();
-    newPageHandle->location.buf = buf;
+    newPageHandle->getBufferSpace = [this]() -> void* {
+        return this->requestBufferSpace();
+    };
     newPageHandle->refCount++;
-    return newPageHandle;	
+    pinned++;
+    return newPageHandle;
 }
 
 void MyDB_BufferManager :: unpin (MyDB_PageHandle unpinMe) {
@@ -93,6 +111,7 @@ void MyDB_BufferManager :: unpin (MyDB_PageHandle unpinMe) {
         this->head->prev = node;
         this->head = node;
     }
+    pinned--;
 }
 
 void * MyDB_BufferManager :: requestBufferSpace() {
@@ -118,6 +137,7 @@ MyDB_BufferManager :: MyDB_BufferManager (size_t pageSize, size_t numPages, stri
     this->buffer = malloc(pageSize * numPages);
     this->head = nullptr;
     this->tail = nullptr;
+    this->pinned = 0;
     for (int i = numPages - 1; i >= 0; i--) {
         this->freePages.push_back(i); // Add all pages to free list
     }
