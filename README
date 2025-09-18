@@ -10,3 +10,9 @@ Need to clarify exactly what constitutes as a "use." This creates a problem when
 the LRU cache it might not necessarily have been "used" more recently than anything there. This would require keeping some sort of clock,
 but if unpinning counts as a use we can proceed as expected. Might also not even matter since I'm not sure how they would even test 
 whether a page is in the buffer.
+
+Will pinning a page when all pages are used be tested
+
+Ask about writing to a stale pointer
+
+Ask about "multiple page handles" and what the problem would be with returning the same one

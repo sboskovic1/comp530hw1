@@ -21,6 +21,9 @@ MyDB_PageHandle MyDB_BufferManager :: getPage (MyDB_TablePtr tablePtr, long idx)
 	MyDB_PageHandle newPageHandle = make_shared<MyDB_PageHandleBase>();
     // If not, create a new page handle and add it to the table
     this->table[tablePtr][idx] = newPageHandle;
+    newPageHandle->pushNode = [this, newPageHandle]() {
+        this->push(newPageHandle);
+    };
     newPageHandle->location.table = tablePtr;
     newPageHandle->location.pageIndex = idx;
     newPageHandle->refCount++;
@@ -36,6 +39,9 @@ MyDB_PageHandle MyDB_BufferManager :: getPage () {
     newPageHandle->refCount++;
     newPageHandle->permanent = TEMP;
     newPageHandle->location.tempFile = this->tempFile;
+    newPageHandle->pushNode = [this, newPageHandle]() {
+        this->push(newPageHandle);
+    };
     newPageHandle->getBufferSpace = [this]() -> void* {
         return this->requestBufferSpace();
     };
@@ -43,14 +49,14 @@ MyDB_PageHandle MyDB_BufferManager :: getPage () {
 }
 
 MyDB_PageHandle MyDB_BufferManager :: getPinnedPage (MyDB_TablePtr tablePtr, long idx) {
-    if (this->pinned == this->numPages) {
-        return nullptr; // All pages are pinned, cannot pin another
-    }
     // Don't forget case where it already exists in buffer
     if (this->table.find(tablePtr) != this->table.end()) {
         if (this->table[tablePtr].find(idx) != this->table[tablePtr].end()) {
             MyDB_PageHandle pageHandle = this->table[tablePtr][idx];
             if (pageHandle->pinned != PINNED) {
+                if (this->pinned == this->numPages) {
+                    return nullptr; // All pages are pinned, cannot pin another
+                } 
                this->pinned++;
             }
             pageHandle->pinned = PINNED;
@@ -59,13 +65,18 @@ MyDB_PageHandle MyDB_BufferManager :: getPinnedPage (MyDB_TablePtr tablePtr, lon
                 void * buf = this->requestBufferSpace();
                 pageHandle->location.buf = buf;
                 pageHandle->active = ACTIVE;
+                // TODO
                 // Write to buffer with file IO
+
             } else { // Node already in LRU cache, remove it so it cannot be ejected
                 node->eject();
             }
             pageHandle->refCount++;
             return pageHandle;
         }
+    }
+    if (this->pinned == this->numPages) {
+        return nullptr; // All pages are pinned, cannot pin another
     }
 	MyDB_PageHandle newPageHandle = make_shared<MyDB_PageHandleBase>();
     // If not, create a new page handle and add all necessary information
@@ -78,6 +89,9 @@ MyDB_PageHandle MyDB_BufferManager :: getPinnedPage (MyDB_TablePtr tablePtr, lon
     newPageHandle->refCount++;
     newPageHandle->getBufferSpace = [this]() -> void* {
         return this->requestBufferSpace();
+    };
+    newPageHandle->pushNode = [this, newPageHandle]() {
+        this->push(newPageHandle);
     };
     return newPageHandle;
 }
@@ -92,6 +106,9 @@ MyDB_PageHandle MyDB_BufferManager :: getPinnedPage () {
     newPageHandle->permanent = TEMP;
     newPageHandle->getBufferSpace = [this]() -> void* {
         return this->requestBufferSpace();
+    };
+    newPageHandle->pushNode = [this, newPageHandle]() {
+        this->push(newPageHandle);
     };
     newPageHandle->refCount++;
     pinned++;
@@ -156,6 +173,7 @@ MyDB_BufferManager :: ~MyDB_BufferManager () {
 }
 
 void MyDB_BufferManager :: clear (void * page) {
+    // TODO
     // Clear page to be replaced in buffer
 }
 
@@ -191,7 +209,23 @@ void MyDB_BufferManager :: printBuffer() {
     std::cout << std::endl << "End of Buffer State" << std::endl << std::endl;
 }
 
-	
+void MyDB_BufferManager :: push(MyDB_PageHandle pageHandle) {
+    MyDB_LRUNode * node = this->findNode(pageHandle);
+    if (node != nullptr) { // Node already in LRU cache, remove it so it cannot be ejected
+        node->eject();
+        node->next = this->head;
+        if (this->head != nullptr) {
+            this->head->prev = node;
+        }
+        this->head = node;
+        node->prev = nullptr;
+    } else { // Node not in LRU cache, make a new node
+        node = new MyDB_LRUNode(pageHandle);
+        // TODO
+        // If LRU cache is full, eject the tail node and write it back if dirty
+    }
+}
+
 #endif
 
 

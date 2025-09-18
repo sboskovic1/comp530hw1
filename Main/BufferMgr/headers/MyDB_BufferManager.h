@@ -72,6 +72,8 @@ public:
 
     void printBuffer();
 
+    void push(MyDB_PageHandle pageHandle);
+
 private:
 
 	// YOUR STUFF HERE

@@ -7,6 +7,7 @@
 #include "MyDB_Table.h"
 #include "MyDB_TempFile.h"
 
+
 // page handles are basically smart pointers
 using namespace std;
 class MyDB_PageHandleBase;
@@ -43,6 +44,7 @@ public:
     int dirty; // clean/dirty
 
     std::function<void*()> getBufferSpace; // Passed down from buffer manager to request buffer space
+    std::function<void()> pushNode; // Passed down from buffer manager to push node to front of LRU
 
     Location location; // location of page
 

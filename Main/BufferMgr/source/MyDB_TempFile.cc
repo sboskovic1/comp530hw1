@@ -25,22 +25,29 @@ MyDB_TempFile :: ~MyDB_TempFile() {
 
 // Write a page to temp memory when it is ejected from cache
 void MyDB_TempFile :: writePage(void * buf, size_t pageNum) {
-
+    // TODO
 }
 
 // Retrieve a page from temp memory when it is needed again
 void MyDB_TempFile :: fetchPage(void * buf, size_t pageNum) {
-
+    // TODO
 }
 
 // Get a free page number to write to
 int MyDB_TempFile :: getFreePage() {
-    return -1;
+    if (this->freePages.size() > 0) {
+        int pageNum = this->freePages.back();
+        this->freePages.pop_back();
+        return pageNum;
+    } else {
+        totalSize++;
+        return totalSize - 1;
+    }
 }
 
 // Clear a page from temp memory when it is no longer needed, freeing up its space
 void MyDB_TempFile :: clearPage(size_t pageNum) {
-    
+    // TODO
 }
 
 
