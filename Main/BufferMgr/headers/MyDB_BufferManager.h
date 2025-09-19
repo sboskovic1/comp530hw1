@@ -74,6 +74,8 @@ public:
 
     void push(MyDB_PageHandle pageHandle);
 
+	void createDiskFile(MyDB_TablePtr whichTable);
+
 private:
 
 	// YOUR STUFF HERE

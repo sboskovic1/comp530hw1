@@ -6,6 +6,9 @@
 #include <iostream>
 #include <unordered_map>
 #include <vector>
+#include <fcntl.h>      // open, O_* flags
+#include <unistd.h>     // close
+#include <sys/stat.h>   // S_IRUSR, S_IWUSR
 
 using namespace std;
 
@@ -49,9 +52,7 @@ MyDB_PageHandle MyDB_BufferManager :: getPage () {
 }
 
 MyDB_PageHandle MyDB_BufferManager :: getPinnedPage (MyDB_TablePtr tablePtr, long idx) {
-    if (this->pinned == this->numPages) {
-        return nullptr; // All pages are pinned, cannot pin another
-    }
+
     // TOOD: Don't forget case where it already exists in buffer
 
     if (this->table.find(tablePtr) != this->table.end()) {
@@ -233,6 +234,21 @@ void MyDB_BufferManager :: push(MyDB_PageHandle pageHandle) {
         node = new MyDB_LRUNode(pageHandle);
         // TODO
         // If LRU cache is full, eject the tail node and write it back if dirty
+    }
+}
+
+void MyDB_BufferManager :: createDiskFile(MyDB_TablePtr whichTable) {
+    const char * filename = whichTable->getStorageLoc().c_str();
+    // O_CREAT | O_EXCL → create only if file doesn’t exist; otherwise open fails.
+    // O_RDWR → open for reading and writing.
+    // O_FSYNC → force writes to disk immediately.
+    // S_IRUSR | S_IWUSR → owner can read/write (needed with O_CREAT
+    int fd = open(filename, O_CREAT | O_EXCL, S_IRUSR | S_IWUSR);
+    if (fd >= 0) {
+        std::cout << "File created successfully: " << filename << std::endl;
+        close(fd);
+    } else {
+        std::cout << "File already exists " << filename << std::endl;
     }
 }
 

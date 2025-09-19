@@ -21,6 +21,7 @@ void *MyDB_PageHandleBase :: getBytes () {
             if (this->location.pageIndex == -1) {
                 this->location.pageIndex = this->location.tempFile->getFreePage();
             }
+            // Not sure if this code is correct because we need to copy file contents from temp file into buffer
             // Load from temp file
             this->location.tempFile->fetchPage(this->location.buf, this->location.pageIndex);
         }
