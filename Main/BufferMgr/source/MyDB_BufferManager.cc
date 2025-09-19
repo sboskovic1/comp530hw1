@@ -30,6 +30,7 @@ MyDB_PageHandle MyDB_BufferManager :: getPage (MyDB_TablePtr tablePtr, long idx)
     newPageHandle->location.table = tablePtr;
     newPageHandle->location.pageIndex = idx;
     newPageHandle->refCount++;
+    newPageHandle->pageSize = this->pageSize;
     newPageHandle->permanent = DISK;
     newPageHandle->getBufferSpace = [this]() -> void* {
         return this->requestBufferSpace();
@@ -41,6 +42,7 @@ MyDB_PageHandle MyDB_BufferManager :: getPage () {
 	MyDB_PageHandle newPageHandle = make_shared<MyDB_PageHandleBase>();
     newPageHandle->refCount++;
     newPageHandle->permanent = TEMP;
+    newPageHandle->pageSize = this->pageSize;
     newPageHandle->location.tempFile = this->tempFile;
     newPageHandle->pushNode = [this, newPageHandle]() {
         this->push(newPageHandle);
@@ -92,6 +94,7 @@ MyDB_PageHandle MyDB_BufferManager :: getPinnedPage (MyDB_TablePtr tablePtr, lon
     newPageHandle->active = INACTIVE;
     newPageHandle->permanent = DISK;
     newPageHandle->refCount++;
+    newPageHandle->pageSize = this->pageSize;
     newPageHandle->getBufferSpace = [this]() -> void* {
         return this->requestBufferSpace();
     };
@@ -109,6 +112,7 @@ MyDB_PageHandle MyDB_BufferManager :: getPinnedPage () {
     newPageHandle->pinned = PINNED;
     newPageHandle->active = INACTIVE;
     newPageHandle->permanent = TEMP;
+    newPageHandle->pageSize = this->pageSize;
     newPageHandle->getBufferSpace = [this]() -> void* {
         return this->requestBufferSpace();
     };

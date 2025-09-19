@@ -42,6 +42,7 @@ public:
     int pinned; // pinned/unpinned
     int permanent; // temp/disk
     int dirty; // clean/dirty
+	size_t pageSize;
 
     std::function<void*()> getBufferSpace; // Passed down from buffer manager to request buffer space
     std::function<void()> pushNode; // Passed down from buffer manager to push node to front of LRU
