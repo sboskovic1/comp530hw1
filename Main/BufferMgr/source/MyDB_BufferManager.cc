@@ -136,15 +136,16 @@ void MyDB_BufferManager :: unpin (MyDB_PageHandle unpinMe) {
     pinned--;
 }
 
-void * MyDB_BufferManager :: requestBufferSpace() {
+void * MyDB_BufferManager :: requestBufferSpace() { // Notably also writes whatever is ejected back to memory
     if (this->freePages.size() != 0) {
         void * buf = (char *) buffer + (freePages.back() * pageSize);
         freePages.pop_back();
         return buf;
     } else {
         // Eject the most recent page
-        // TODO: What if the buffer is full with all pinned pages? Do we return just return false?
-
+        if (this->pinned == this->numPages) {
+            return nullptr; // All pages are pinned, cannot eject any
+        }
         MyDB_PageHandle * node = &tail->eject()->pageHandle;
         (*node)->writeBack();
         this->clear((*node)->location.buf);
@@ -222,7 +223,7 @@ void MyDB_BufferManager :: printBuffer() {
 
 void MyDB_BufferManager :: push(MyDB_PageHandle pageHandle) {
     MyDB_LRUNode * node = this->findNode(pageHandle);
-    if (node != nullptr) { // Node already in LRU cache, remove it so it cannot be ejected
+    if (node != nullptr) { // Node already in LRU cache
         node->eject();
         node->next = this->head;
         if (this->head != nullptr) {
@@ -232,8 +233,15 @@ void MyDB_BufferManager :: push(MyDB_PageHandle pageHandle) {
         node->prev = nullptr;
     } else { // Node not in LRU cache, make a new node
         node = new MyDB_LRUNode(pageHandle);
-        // TODO
-        // If LRU cache is full, eject the tail node and write it back if dirty
+        if (this->head == nullptr) { // There will always be space since we already gave this node buffer space and ejected the tail
+            this->head = node;
+            this->tail = node;
+        } else {
+            node->next = this->head;
+            this->head->prev = node;
+            this->head = node;
+        }
+        node->prev = nullptr;
     }
 }
 

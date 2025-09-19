@@ -26,11 +26,13 @@ void *MyDB_PageHandleBase :: getBytes () {
             this->location.tempFile->fetchPage(this->location.buf, this->location.pageIndex);
         }
     }
+    this->pushNode(); // Push to front of LRU
 	return this->location.buf;
 }
 
 void MyDB_PageHandleBase :: wroteBytes () {
     this->dirty = DIRTY;
+    this->pushNode(); // Push to front of LRU
 }
 
 

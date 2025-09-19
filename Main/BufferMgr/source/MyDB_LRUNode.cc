@@ -12,8 +12,15 @@ MyDB_LRUNode :: MyDB_LRUNode(MyDB_PageHandle pageHandle) {
 }
 
 MyDB_LRUNode * MyDB_LRUNode :: eject() {
-    // TODO
-    return nullptr;
+    if (this->prev != nullptr) {
+        this->prev->next = this->next;
+    }
+    if (this->next != nullptr) {
+        this->next->prev = this->prev;
+    }
+    this->prev = nullptr;
+    this->next = nullptr;
+    return this;
 }
 
 #endif
