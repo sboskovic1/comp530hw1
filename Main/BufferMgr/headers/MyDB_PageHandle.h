@@ -73,6 +73,8 @@ public:
 
     MyDB_PageHandleBase ();
 
+	void readBytesIntoBuf();
+
     void writeBack();
 
     void printHandle();

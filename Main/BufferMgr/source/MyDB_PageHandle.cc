@@ -17,56 +17,20 @@ void *MyDB_PageHandleBase :: getBytes () {
         // Need to load the page from disk or temp file
         this->location.buf = this->getBufferSpace();
         this->active = ACTIVE;
-        if (this->permanent == DISK) {
-            std::string fileName = this->location.table->getStorageLoc();
-            long idx = this->location.pageIndex;
-
-            int fd = open(fileName.c_str(), O_RDONLY);
-            if (fd < 0) {
-                perror("open failed");
-                return nullptr;
-            }
-
-            // Seek to the correct page offset
-            off_t offset = idx * this->pageSize;
-            if (lseek(fd, offset, SEEK_SET) == (off_t)-1) {
-                perror("lseek failed");
-                close(fd);
-                return nullptr;
-            }
-
-            // Read page into buffer
-            ssize_t bytesRead = read(fd, this->location.buf, this->pageSize);
-            if (bytesRead < 0) {
-                perror("read failed");
-                close(fd);
-                return nullptr;
-            }
-
-            // If the page in the didn't have pageSize bytes, fill the rest of the buffer page with 0's
-            if ((size_t)bytesRead < this->pageSize) {
-                std::memset((char*)this->location.buf + bytesRead, 0, this->pageSize - bytesRead);
-            }
-
-            close(fd);
-        } else {
-            if (this->location.pageIndex == -1) {
-                this->location.pageIndex = this->location.tempFile->getFreePage();
-            }
-            // Load from temp file
-            this->location.tempFile->fetchPage(this->location.buf, this->location.pageIndex);
-        }
+        readBytesIntoBuf();
     }
+
     this->pushNode(); // Push to front of LRU
 	return this->location.buf;
 }
 
 void MyDB_PageHandleBase :: wroteBytes () {
     this->dirty = DIRTY;
-    // TODO: We shouldn't push the node to the front of the LRU if it is a pinned page bc it exists outside of the LRU
-    this->pushNode(); // Push to front of LRU
+    //shouldn't push the node if it is a pinned page bc it exists outside of the LRU
+    if (this->pinned == UNPINNED) {
+        this->pushNode(); // Push to front of LRU
+    }
 }
-
 
 MyDB_PageHandleBase :: MyDB_PageHandleBase () {
     this->refCount = 0;
@@ -89,45 +53,102 @@ MyDB_PageHandleBase :: ~MyDB_PageHandleBase () {
     }
 }
 
-void MyDB_PageHandleBase :: writeBack() {
-    // Write back to disk or temp if dirty
-    if (this->dirty == DIRTY) {
-        if (this->permanent == DISK) {
-            std::string fileName = this->location.table->getStorageLoc();
-            long idx = this->location.pageIndex;
-
-            int fd = open(fileName.c_str(), O_WRONLY | O_FSYNC);
-            if (fd < 0) {
-                perror("open failed");
-                return;
-            }
-            
-            // Seek to the correct page offset
-            off_t offset = idx * this->pageSize;
-            if (lseek(fd, offset, SEEK_SET) == (off_t)-1) {
-                perror("lseek failed");
-                close(fd);
-            }
-
-            // Write to the file
-            ssize_t totalWritten = 0;
-            const char *data = (const char *)this->location.buf;
-            while (totalWritten < (ssize_t)this->pageSize) {
-                ssize_t written = write(fd, data + totalWritten, pageSize - totalWritten);
-                if (written <= 0) {
-                    perror("write failed");
-                    break;
-                }
-                totalWritten += written;
-            }
-
-            close(fd);
-
-        } else {
-            // Write to temp
-            this->location.tempFile->writePage(this->location.buf, this->location.pageIndex);
-        }
+void MyDB_PageHandleBase :: readBytesIntoBuf() {
+    long idx = this->location.pageIndex;
+    std::string fileName;
+    if (this->permanent == DISK) {
+        fileName = this->location.table->getStorageLoc();
+    } else {
+        fileName = this->location.tempFile->fileName;
     }
+
+    // Open read/write so we can extend if needed
+    int fd = open(fileName.c_str(), O_RDWR | O_FSYNC);
+    if (fd < 0) {
+        perror("open failed");
+        return;
+    }
+
+    off_t offset = idx * this->pageSize;
+
+    // Ensure file is large enough for this page:
+    // Move to last byte of the page and write a '\0'
+    if (lseek(fd, offset + this->pageSize - 1, SEEK_SET) == (off_t)-1) {
+        perror("lseek failed");
+        close(fd);
+        return;
+    }
+
+    if (write(fd, "\0", 1) != 1) {
+        perror("write to extend file failed");
+        close(fd);
+        return;
+    }
+
+    // Now seek back to the start of the page
+    if (lseek(fd, offset, SEEK_SET) == (off_t)-1) {
+        perror("lseek failed");
+        close(fd);
+        return;
+    }
+
+    // Read page into buffer
+    ssize_t bytesRead = read(fd, this->location.buf, this->pageSize);
+    if (bytesRead < 0) {
+        perror("read failed");
+        close(fd);
+        return;
+    }
+
+    close(fd);
+}
+
+void MyDB_PageHandleBase :: writeBack() {
+    // This should never happen
+    if (this->pinned == PINNED) {
+        perror("page is pinned, cannot write to disk");
+        return;
+    }
+
+    if (this->dirty == CLEAN) {
+        std::cout << "this page is not dirty, not writing to disk" << std::endl;
+        return;
+    }
+
+    long idx = this->location.pageIndex;
+    string fileName = "";
+    if (this->permanent == DISK) {
+        fileName = this->location.table->getStorageLoc();
+    } else {
+        fileName = this->location.tempFile->fileName;
+    }
+
+    int fd = open(fileName.c_str(), O_WRONLY | O_FSYNC);
+    if (fd < 0) {
+        perror("open failed");
+        return;
+    }
+    
+    // Seek to the correct page offset
+    off_t offset = idx * this->pageSize;
+    if (lseek(fd, offset, SEEK_SET) == (off_t)-1) {
+        perror("lseek failed");
+        close(fd);
+    }
+
+    // Write to the file
+    ssize_t totalWritten = 0;
+    const char *data = (const char *)this->location.buf;
+    while (totalWritten < (ssize_t)this->pageSize) {
+        ssize_t written = write(fd, data + totalWritten, pageSize - totalWritten);
+        if (written <= 0) {
+            perror("write failed");
+            break;
+        }
+        totalWritten += written;
+    }
+
+    close(fd);
 }
 
 void MyDB_PageHandleBase :: printHandle() {
