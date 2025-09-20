@@ -13,6 +13,8 @@
 using namespace std;
 
 MyDB_PageHandle MyDB_BufferManager :: getPage (MyDB_TablePtr tablePtr, long idx) {
+    createDiskFile(tablePtr);
+    
     // Check if the page already exists
     if (this->table.find(tablePtr) != this->table.end()) {
         if (this->table[tablePtr].find(idx) != this->table[tablePtr].end()) {
@@ -54,8 +56,7 @@ MyDB_PageHandle MyDB_BufferManager :: getPage () {
 }
 
 MyDB_PageHandle MyDB_BufferManager :: getPinnedPage (MyDB_TablePtr tablePtr, long idx) {
-
-    // TOOD: Don't forget case where it already exists in buffer
+    createDiskFile(tablePtr);
 
     if (this->table.find(tablePtr) != this->table.end()) {
         if (this->table[tablePtr].find(idx) != this->table[tablePtr].end()) {
@@ -67,17 +68,13 @@ MyDB_PageHandle MyDB_BufferManager :: getPinnedPage (MyDB_TablePtr tablePtr, lon
                this->pinned++;
             }
             pageHandle->pinned = PINNED;
-            MyDB_LRUNode * node = findNode(pageHandle);
-            if (node == nullptr) {
-                void * buf = this->requestBufferSpace();
-                pageHandle->location.buf = buf;
-                pageHandle->active = ACTIVE;
-                // TODO
-                // Write to buffer with file IO
 
-            } else { // Node already in LRU cache, remove it so it cannot be ejected
+            // Remove the node from the LRU if it's there so it can't be ejected
+            MyDB_LRUNode * node = findNode(pageHandle);
+            if (node != nullptr) {
                 node->eject();
             }
+
             pageHandle->refCount++;
             return pageHandle;
         }

@@ -44,12 +44,17 @@ MyDB_PageHandleBase :: MyDB_PageHandleBase () {
 }
 
 MyDB_PageHandleBase :: ~MyDB_PageHandleBase () {
-    // TODO
-    if (this->active == ACTIVE) {
-        this->writeBack();
-    }
-    if (this->permanent == TEMP) {
-        this->location.tempFile->clearPage(this->location.pageIndex);
+    // If the page is currently pinned, unpin it and add it to the LRU
+    if (this->pinned == PINNED) {
+        this->pinned = UNPINNED;
+        this->pushNode();
+    } else {
+        if (this->active == ACTIVE) {
+            this->writeBack();
+        }
+        if (this->permanent == TEMP) {
+            this->location.tempFile->clearPage(this->location.pageIndex);
+        }
     }
 }
 
