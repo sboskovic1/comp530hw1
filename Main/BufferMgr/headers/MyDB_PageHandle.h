@@ -46,6 +46,7 @@ public:
 
     std::function<void*()> getBufferSpace; // Passed down from buffer manager to request buffer space
     std::function<void()> pushNode; // Passed down from buffer manager to push node to front of LRU
+    std::function<void(void*)> giveBack; // Return a page upon destruction
 
     Location location; // location of page
 

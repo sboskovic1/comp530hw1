@@ -76,6 +76,8 @@ public:
 
 	void createDiskFile(MyDB_TablePtr whichTable);
 
+    void returnPage(void * buf);
+
 private:
 
 	// YOUR STUFF HERE

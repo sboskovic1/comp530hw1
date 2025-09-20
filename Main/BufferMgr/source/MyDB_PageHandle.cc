@@ -45,11 +45,13 @@ MyDB_PageHandleBase :: MyDB_PageHandleBase () {
 
 MyDB_PageHandleBase :: ~MyDB_PageHandleBase () {
     // If the page is currently pinned, unpin it and add it to the LRU
+    std::cout << "destructor called for pagehandle" << std::endl;
     if (this->pinned == PINNED) {
         this->pinned = UNPINNED;
         this->pushNode();
     } else {
         if (this->active == ACTIVE) {
+            this->giveBack(this->location.buf);
             this->writeBack();
         }
         if (this->permanent == TEMP) {

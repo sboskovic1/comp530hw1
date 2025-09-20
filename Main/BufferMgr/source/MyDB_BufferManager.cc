@@ -29,6 +29,9 @@ MyDB_PageHandle MyDB_BufferManager :: getPage (MyDB_TablePtr tablePtr, long idx)
     newPageHandle->pushNode = [this, newPageHandle]() {
         this->push(newPageHandle);
     };
+    newPageHandle->giveBack = [this](void * buf) {
+        this->returnPage(buf);
+    };
     newPageHandle->location.table = tablePtr;
     newPageHandle->location.pageIndex = idx;
     newPageHandle->refCount++;
@@ -48,6 +51,9 @@ MyDB_PageHandle MyDB_BufferManager :: getPage () {
     newPageHandle->location.tempFile = this->tempFile;
     newPageHandle->pushNode = [this, newPageHandle]() {
         this->push(newPageHandle);
+    };
+    newPageHandle->giveBack = [this](void * buf) {
+        this->returnPage(buf);
     };
     newPageHandle->getBufferSpace = [this]() -> void* {
         return this->requestBufferSpace();
@@ -95,6 +101,9 @@ MyDB_PageHandle MyDB_BufferManager :: getPinnedPage (MyDB_TablePtr tablePtr, lon
     newPageHandle->getBufferSpace = [this]() -> void* {
         return this->requestBufferSpace();
     };
+    newPageHandle->giveBack = [this](void * buf) {
+        this->returnPage(buf);
+    };
     newPageHandle->pushNode = [this, newPageHandle]() {
         this->push(newPageHandle);
     };
@@ -112,6 +121,9 @@ MyDB_PageHandle MyDB_BufferManager :: getPinnedPage () {
     newPageHandle->pageSize = this->pageSize;
     newPageHandle->getBufferSpace = [this]() -> void* {
         return this->requestBufferSpace();
+    };
+    newPageHandle->giveBack = [this](void * buf) {
+        this->returnPage(buf);
     };
     newPageHandle->pushNode = [this, newPageHandle]() {
         this->push(newPageHandle);
@@ -201,27 +213,6 @@ MyDB_LRUNode * MyDB_BufferManager :: findNode(MyDB_PageHandle pageHandle) {
     return nullptr;
 }
 
-void MyDB_BufferManager :: printBuffer() {
-    std::cout << "Printing Buffer State: " << std::endl << std::endl;
-    std::cout << "Free Pages: " << this->numPages << std::endl;
-    for (int f : freePages) {
-        std::cout << f << " ";
-    }
-    std::cout << std::endl << "LRU Cache: " << std::endl;
-    MyDB_LRUNode * curr = this->head;
-    while (curr != nullptr) {
-        MyDB_PageHandle pageHandle = curr->pageHandle;
-        if (pageHandle->permanent == TEMP) {
-            std::cout << "Temp Page " << pageHandle->location.pageIndex << std::endl;
-        } else {
-            std::cout << "Table: " << pageHandle->location.table->getName() << " " << pageHandle->location.pageIndex << std::endl;
-        }
-        std::cout << "ACTIVE: " << pageHandle->active << " PINNED: " << pageHandle->pinned << " DIRTY: " << pageHandle->dirty << std::endl << std::endl;
-        curr = curr->next;
-    }
-    std::cout << std::endl << "End of Buffer State" << std::endl << std::endl;
-}
-
 void MyDB_BufferManager :: push(MyDB_PageHandle pageHandle) {
     MyDB_LRUNode * node = this->findNode(pageHandle);
     if (node != nullptr) { // Node already in LRU cache
@@ -254,11 +245,37 @@ void MyDB_BufferManager :: createDiskFile(MyDB_TablePtr whichTable) {
     // S_IRUSR | S_IWUSR → owner can read/write (needed with O_CREAT
     int fd = open(filename, O_CREAT | O_EXCL, S_IRUSR | S_IWUSR);
     if (fd >= 0) {
-        std::cout << "File created successfully: " << filename << std::endl;
+        // std::cout << "File created successfully: " << filename << std::endl;
         close(fd);
     } else {
-        std::cout << "File already exists " << filename << std::endl;
+        // std::cout << "File already exists " << filename << std::endl;
     }
+}
+
+void MyDB_BufferManager :: returnPage(void * buf) {
+    std::cout << "Returning page" <<  ((char *)buf - (char *)this->buffer) / this->pageSize << "to free list" << std::endl;
+    this->freePages.push_back(((char *)buf - (char *)this->buffer) / this->pageSize);
+}
+
+void MyDB_BufferManager :: printBuffer() {
+    std::cout << "Printing Buffer State: " << std::endl << std::endl;
+    std::cout << "Free Pages: " << this->numPages << std::endl;
+    for (int f : freePages) {
+        std::cout << f << " ";
+    }
+    std::cout << std::endl << "LRU Cache: " << std::endl;
+    MyDB_LRUNode * curr = this->head;
+    while (curr != nullptr) {
+        MyDB_PageHandle pageHandle = curr->pageHandle;
+        if (pageHandle->permanent == TEMP) {
+            std::cout << "Temp Page " << pageHandle->location.pageIndex << std::endl;
+        } else {
+            std::cout << "Table: " << pageHandle->location.table->getName() << " " << pageHandle->location.pageIndex << std::endl;
+        }
+        std::cout << "ACTIVE: " << pageHandle->active << " PINNED: " << pageHandle->pinned << " DIRTY: " << pageHandle->dirty << std::endl << std::endl;
+        curr = curr->next;
+    }
+    std::cout << std::endl << "End of Buffer State" << std::endl << std::endl;
 }
 
 #endif

@@ -1,0 +1,25 @@
+allocating pinned page
+allocating pinned page
+allocating pinned page
+allocating pinned page
+allocating pinned page
+allocating pinned page
+allocating pinned page
+allocating pinned page
+allocating pinned page
+allocating pinned page
+6 free pages after pinning 10 pages
+6 free pages after unpinning 10 pages
+allocating pinned page
+allocating pinned page
+allocating pinned page
+allocating pinned page
+allocating pinned page
+allocating pinned page
+allocating pinned page
+allocating pinned page
+allocating unpinned page
+allocating unpinned page
+Getting page 10
+allocating unpinned page
+Getting page 11

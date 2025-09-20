@@ -20,10 +20,10 @@ MyDB_TempFile :: MyDB_TempFile(size_t pageSize, string fileName) {
     // Create the tempFile if it hasn't been created yet
     int fd = open(fileName.c_str(), O_CREAT | O_EXCL, S_IRUSR | S_IWUSR);
     if (fd >= 0) {
-        std::cout << "File created successfully: " << fileName << std::endl;
+        // std::cout << "File created successfully: " << fileName << std::endl;
         close(fd);
     } else {
-        std::cout << "File already exists " << fileName << std::endl;
+        // std::cout << "File already exists " << fileName << std::endl;
     }
 }
 
