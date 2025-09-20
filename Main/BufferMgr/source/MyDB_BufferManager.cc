@@ -18,28 +18,32 @@ MyDB_PageHandle MyDB_BufferManager :: getPage (MyDB_TablePtr tablePtr, long idx)
     // Check if the page already exists
     if (this->table.find(tablePtr) != this->table.end()) {
         if (this->table[tablePtr].find(idx) != this->table[tablePtr].end()) {
-            MyDB_PageHandle pageHandle = this->table[tablePtr][idx];
+            MyDB_PageHandle pageHandle = make_shared<MyDB_PageHandleBase>(this->table[tablePtr][idx]);
             pageHandle->refCount++;
             return pageHandle;
         }
     }
-	MyDB_PageHandle newPageHandle = make_shared<MyDB_PageHandleBase>();
-    // If not, create a new page handle and add it to the table
-    this->table[tablePtr][idx] = newPageHandle;
-    newPageHandle->pushNode = [this, newPageHandle]() {
+
+    // If not, create a new page handle base and add it to the table
+    MyDB_PageHandleBase newPageHandleBase = MyDB_PageHandleBase();
+    MyDB_PageHandle newPageHandle = make_shared<MyDB_PageHandleBase>(newPageHandleBase);
+
+    newPageHandleBase.pushNode = [this, newPageHandle]() {
         this->push(newPageHandle);
     };
-    newPageHandle->giveBack = [this](void * buf) {
+    newPageHandleBase.giveBack = [this](void * buf) {
         this->returnPage(buf);
     };
-    newPageHandle->location.table = tablePtr;
-    newPageHandle->location.pageIndex = idx;
-    newPageHandle->refCount++;
-    newPageHandle->pageSize = this->pageSize;
-    newPageHandle->permanent = DISK;
-    newPageHandle->getBufferSpace = [this]() -> void* {
+    newPageHandleBase.location.table = tablePtr;
+    newPageHandleBase.location.pageIndex = idx;
+    newPageHandleBase.refCount++;
+    newPageHandleBase.pageSize = this->pageSize;
+    newPageHandleBase.permanent = DISK;
+    newPageHandleBase.getBufferSpace = [this]() -> void* {
         return this->requestBufferSpace();
     };
+    this->table[tablePtr][idx] = newPageHandleBase;
+
     return newPageHandle;
 }
 
@@ -66,7 +70,7 @@ MyDB_PageHandle MyDB_BufferManager :: getPinnedPage (MyDB_TablePtr tablePtr, lon
 
     if (this->table.find(tablePtr) != this->table.end()) {
         if (this->table[tablePtr].find(idx) != this->table[tablePtr].end()) {
-            MyDB_PageHandle pageHandle = this->table[tablePtr][idx];
+            MyDB_PageHandle pageHandle = make_shared<MyDB_PageHandleBase>(this->table[tablePtr][idx]);
             if (pageHandle->pinned != PINNED) {
                 if (this->pinned == this->numPages) {
                     return nullptr; // All pages are pinned, cannot pin another
@@ -90,23 +94,27 @@ MyDB_PageHandle MyDB_BufferManager :: getPinnedPage (MyDB_TablePtr tablePtr, lon
     }
 	MyDB_PageHandle newPageHandle = make_shared<MyDB_PageHandleBase>();
     // If not, create a new page handle and add all necessary information
-    this->table[tablePtr][idx] = newPageHandle;
-    newPageHandle->location.table = tablePtr;
-    newPageHandle->location.pageIndex = idx;
-    newPageHandle->pinned = PINNED;
-    newPageHandle->active = INACTIVE;
-    newPageHandle->permanent = DISK;
-    newPageHandle->refCount++;
-    newPageHandle->pageSize = this->pageSize;
-    newPageHandle->getBufferSpace = [this]() -> void* {
-        return this->requestBufferSpace();
-    };
-    newPageHandle->giveBack = [this](void * buf) {
-        this->returnPage(buf);
-    };
-    newPageHandle->pushNode = [this, newPageHandle]() {
+    MyDB_PageHandleBase newPageHandleBase = MyDB_PageHandleBase();
+    MyDB_PageHandle newPageHandle = make_shared<MyDB_PageHandleBase>(newPageHandleBase);
+
+    newPageHandleBase.pushNode = [this, newPageHandle]() {
         this->push(newPageHandle);
     };
+    newPageHandleBase.giveBack = [this](void * buf) {
+        this->returnPage(buf);
+    };
+    newPageHandleBase.location.table = tablePtr;
+    newPageHandleBase.location.pageIndex = idx;
+    newPageHandle->pinned = PINNED;
+    newPageHandle->active = ACTIVE;
+    newPageHandleBase.refCount++;
+    newPageHandleBase.pageSize = this->pageSize;
+    newPageHandleBase.permanent = DISK;
+    newPageHandleBase.getBufferSpace = [this]() -> void* {
+        return this->requestBufferSpace();
+    };
+    this->table[tablePtr][idx] = newPageHandleBase;
+
     return newPageHandle;
 }
 
@@ -116,7 +124,7 @@ MyDB_PageHandle MyDB_BufferManager :: getPinnedPage () {
     }
 	MyDB_PageHandle newPageHandle = make_shared<MyDB_PageHandleBase>();
     newPageHandle->pinned = PINNED;
-    newPageHandle->active = INACTIVE;
+    newPageHandle->active = ACTIVE;
     newPageHandle->permanent = TEMP;
     newPageHandle->pageSize = this->pageSize;
     newPageHandle->getBufferSpace = [this]() -> void* {
