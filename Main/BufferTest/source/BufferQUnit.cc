@@ -65,6 +65,7 @@ int main () {
 			writeNums (bytes, 64, i);
 			temp->wroteBytes ();
 			myHandles.push_back (temp);
+			cout << "number of owners of current handle " << temp.use_count() << endl;
 		}
 
         cout << myMgr.freePages.size() << " free pages after pinning 10 pages" << endl;

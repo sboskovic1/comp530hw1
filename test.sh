@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-cd /storage-home/s/sb121/comp530/comp530hw1/Build
+cd /storage-home/t/tl107/comp432/comp530hw1/Build
 if [ -n "$1" ]; then
     bin/bufferUnitTest > "../$1"
 else

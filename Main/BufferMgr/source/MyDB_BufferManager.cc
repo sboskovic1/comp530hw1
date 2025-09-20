@@ -15,34 +15,46 @@ using namespace std;
 MyDB_PageHandle MyDB_BufferManager :: getPage (MyDB_TablePtr tablePtr, long idx) {
     createDiskFile(tablePtr);
     
-    // Check if the page already exists
-    if (this->table.find(tablePtr) != this->table.end()) {
-        if (this->table[tablePtr].find(idx) != this->table[tablePtr].end()) {
-            MyDB_PageHandle pageHandle = make_shared<MyDB_PageHandleBase>(this->table[tablePtr][idx]);
-            pageHandle->refCount++;
-            return pageHandle;
-        }
+    // Check if the page already exists and the pointer is not expired
+    if (this->table.find(tablePtr) != this->table.end() && 
+        this->table[tablePtr].find(idx) != this->table[tablePtr].end() &&
+        !this->table[tablePtr][idx].expired()) {
+
+        MyDB_PageHandle pageHandle = this->table[tablePtr][idx].lock();
+
+        pageHandle->refCount++;
+        return pageHandle;
     }
 
-    // If not, create a new page handle base and add it to the table
-    MyDB_PageHandleBase newPageHandleBase = MyDB_PageHandleBase();
-    MyDB_PageHandle newPageHandle = make_shared<MyDB_PageHandleBase>(newPageHandleBase);
+    // If not, create a new weak page handle base and add it to the table
+    MyDB_PageHandle newPageHandle = make_shared<MyDB_PageHandleBase>();
 
-    newPageHandleBase.pushNode = [this, newPageHandle]() {
-        this->push(newPageHandle);
-    };
-    newPageHandleBase.giveBack = [this](void * buf) {
-        this->returnPage(buf);
-    };
-    newPageHandleBase.location.table = tablePtr;
-    newPageHandleBase.location.pageIndex = idx;
-    newPageHandleBase.refCount++;
-    newPageHandleBase.pageSize = this->pageSize;
-    newPageHandleBase.permanent = DISK;
-    newPageHandleBase.getBufferSpace = [this]() -> void* {
+    std::weak_ptr<MyDB_PageHandleBase> weakPointer = newPageHandle; 
+
+    // Lambda for pushNode captures weak_ptr instead of shared_ptr
+    // newPageHandle->pushNode = [this, weakPointer]() {
+    //     if (auto self = weakPointer.lock()) {  // temporarily get a shared_ptr
+    //         this->push(self);
+    //     }
+    // };
+    // // Lambda for giveBack captures weak_ptr instead of shared_ptr
+    // newPageHandle->giveBack = [this, weakPointer](void * buf) {
+    //     if (auto self = weakPointer.lock()) {  // temporarily get a shared_ptr
+    //         this->returnPage(buf);
+    //     }
+    // };
+    newPageHandle->location.table = tablePtr;
+    newPageHandle->location.pageIndex = idx;
+    newPageHandle->refCount++;
+    newPageHandle->pageSize = this->pageSize;
+    newPageHandle->permanent = DISK;
+    newPageHandle->getBufferSpace = [this]() -> void* {
         return this->requestBufferSpace();
     };
-    this->table[tablePtr][idx] = newPageHandleBase;
+
+    // Add new weak pointer to table
+    
+    this->table[tablePtr][idx] = weakPointer;
 
     return newPageHandle;
 }
@@ -68,52 +80,62 @@ MyDB_PageHandle MyDB_BufferManager :: getPage () {
 MyDB_PageHandle MyDB_BufferManager :: getPinnedPage (MyDB_TablePtr tablePtr, long idx) {
     createDiskFile(tablePtr);
 
-    if (this->table.find(tablePtr) != this->table.end()) {
-        if (this->table[tablePtr].find(idx) != this->table[tablePtr].end()) {
-            MyDB_PageHandle pageHandle = make_shared<MyDB_PageHandleBase>(this->table[tablePtr][idx]);
-            if (pageHandle->pinned != PINNED) {
-                if (this->pinned == this->numPages) {
-                    return nullptr; // All pages are pinned, cannot pin another
-                } 
-               this->pinned++;
-            }
-            pageHandle->pinned = PINNED;
+    if (this->table.find(tablePtr) != this->table.end() && 
+        this->table[tablePtr].find(idx) != this->table[tablePtr].end() &&
+        !this->table[tablePtr][idx].expired()) {
 
-            // Remove the node from the LRU if it's there so it can't be ejected
-            MyDB_LRUNode * node = findNode(pageHandle);
-            if (node != nullptr) {
-                node->eject();
-            }
+        MyDB_PageHandle pageHandle = this->table[tablePtr][idx].lock();
 
-            pageHandle->refCount++;
-            return pageHandle;
+        if (pageHandle->pinned != PINNED) {
+            if (this->pinned == this->numPages) {
+                return nullptr; // All pages are pinned, cannot pin another
+            } 
+            this->pinned++;
         }
+        pageHandle->pinned = PINNED;
+
+        // Remove the node from the LRU if it's there so it can't be ejected
+        MyDB_LRUNode * node = findNode(pageHandle);
+        if (node != nullptr) {
+            node->eject();
+        }
+
+        pageHandle->refCount++;
+        return pageHandle;
     }
     if (this->pinned == this->numPages) {
         return nullptr; // All pages are pinned, cannot pin another
     }
-	MyDB_PageHandle newPageHandle = make_shared<MyDB_PageHandleBase>();
-    // If not, create a new page handle and add all necessary information
-    MyDB_PageHandleBase newPageHandleBase = MyDB_PageHandleBase();
-    MyDB_PageHandle newPageHandle = make_shared<MyDB_PageHandleBase>(newPageHandleBase);
+	// If not, create a new weak page handle base and add it to the table
+    MyDB_PageHandle newPageHandle = make_shared<MyDB_PageHandleBase>();
 
-    newPageHandleBase.pushNode = [this, newPageHandle]() {
-        this->push(newPageHandle);
-    };
-    newPageHandleBase.giveBack = [this](void * buf) {
-        this->returnPage(buf);
-    };
-    newPageHandleBase.location.table = tablePtr;
-    newPageHandleBase.location.pageIndex = idx;
+    std::weak_ptr<MyDB_PageHandleBase> weakPointer = newPageHandle; 
+    // Lambda for pushNode captures weak_ptr instead of shared_ptr
+    // newPageHandle->pushNode = [this, weakPointer]() {
+    //     if (auto self = weakPointer.lock()) {  // temporarily get a shared_ptr
+    //         this->push(self);
+    //     }
+    // };
+    // // Lambda for giveBack captures weak_ptr instead of shared_ptr
+    // newPageHandle->giveBack = [this, weakPointer](void * buf) {
+    //     if (auto self = weakPointer.lock()) {  // temporarily get a shared_ptr
+    //         this->returnPage(buf);
+    //     }
+    // };
+    newPageHandle->location.table = tablePtr;
+    newPageHandle->location.pageIndex = idx;
     newPageHandle->pinned = PINNED;
     newPageHandle->active = ACTIVE;
-    newPageHandleBase.refCount++;
-    newPageHandleBase.pageSize = this->pageSize;
-    newPageHandleBase.permanent = DISK;
-    newPageHandleBase.getBufferSpace = [this]() -> void* {
+    newPageHandle->refCount++;
+    newPageHandle->pageSize = this->pageSize;
+    newPageHandle->permanent = DISK;
+    newPageHandle->getBufferSpace = [this]() -> void* {
         return this->requestBufferSpace();
     };
-    this->table[tablePtr][idx] = newPageHandleBase;
+    // newPageHandle->bufferMgr = this;
+
+    // Add new weak pointer to table
+    this->table[tablePtr][idx] = weakPointer;
 
     return newPageHandle;
 }
@@ -159,6 +181,7 @@ void MyDB_BufferManager :: unpin (MyDB_PageHandle unpinMe) {
 
 void * MyDB_BufferManager :: requestBufferSpace() { // Notably also writes whatever is ejected back to memory
     if (this->freePages.size() != 0) {
+        cout << "giving a free buffer space off" << endl;
         void * buf = (char *) buffer + (freePages.back() * pageSize);
         freePages.pop_back();
         return buf;

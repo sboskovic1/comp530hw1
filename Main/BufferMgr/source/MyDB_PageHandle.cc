@@ -20,7 +20,7 @@ void *MyDB_PageHandleBase :: getBytes () {
         readBytesIntoBuf();
     }
 
-    this->pushNode(); // Push to front of LRU
+    // this->pushNode(); // Push to front of LRU
 	return this->location.buf;
 }
 
@@ -45,13 +45,11 @@ MyDB_PageHandleBase :: MyDB_PageHandleBase () {
 
 MyDB_PageHandleBase :: ~MyDB_PageHandleBase () {
     // If the page is currently pinned, unpin it and add it to the LRU
-    std::cout << "destructor called for pagehandle" << std::endl;
     if (this->pinned == PINNED) {
         this->pinned = UNPINNED;
         this->pushNode();
     } else {
         if (this->active == ACTIVE) {
-            this->giveBack(this->location.buf);
             this->writeBack();
         }
         if (this->permanent == TEMP) {

@@ -24,7 +24,7 @@ public:
     int pinned;
 
     vector<int> freePages;
-    unordered_map<MyDB_TablePtr, unordered_map<long, MyDB_PageHandleBase>> table; // Maps table and page index to page handle
+    unordered_map<MyDB_TablePtr, unordered_map<long, std::weak_ptr<MyDB_PageHandleBase>>> table; // Maps table and page index to page handle
 
 	// THESE METHODS MUST APPEAR AND THE PROTOTYPES CANNOT CHANGE!
 
