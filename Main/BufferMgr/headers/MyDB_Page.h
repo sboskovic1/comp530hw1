@@ -1,25 +1,53 @@
 
-#ifndef PAGE_HANDLE_H
-#define PAGE_HANDLE_H
+#ifndef PAGE_H
+#define PAGE_H
 
 #include <memory>
 #include <functional>
-#include "MyDB_Page.h"
+#include "MyDB_Table.h"
+#include "MyDB_TempFile.h"
 
 
 // page handles are basically smart pointers
 using namespace std;
-class MyDB_PageHandleBase;
-typedef shared_ptr <MyDB_PageHandleBase> MyDB_PageHandle;
 
+typedef struct {
+    MyDB_TablePtr table;
+    MyDB_TempFile * tempFile;
+    long pageIndex;
+    void * buf;
+} Location;
 
-class MyDB_PageHandleBase {
+class MyDB_Page {
+
+#define INACTIVE 0
+#define ACTIVE 1
+
+#define TEMP 0
+#define DISK 1
+
+#define UNPINNED 0
+#define PINNED 1
+
+#define CLEAN 0
+#define DIRTY 1
 
 public:
 
-    MyDB_Page * page;
-    std::function<void(MyDB_Page*)> getPage;
-    
+    int refCount;
+
+    int active; // active/inactive
+    int pinned; // pinned/unpinned
+    int permanent; // temp/disk
+    int dirty; // clean/dirty
+	size_t pageSize;
+
+    std::function<void*()> getBufferSpace; // Passed down from buffer manager to request buffer space
+    std::function<void()> pushNode; // Passed down from buffer manager to push node to front of LRU
+    std::function<void(void*)> giveBack; // Return a page upon destruction
+
+    Location location; // location of page
+
 	// THESE METHODS MUST BE IMPLEMENTED WITHOUT CHANGING THE DEFINITION
 
 	// access the raw bytes in this page... if the page is not currently
@@ -38,11 +66,17 @@ public:
 	// to the particular page that it references.  If the number of 
 	// references to a pinned page goes down to zero, then the page should
 	// become unpinned.  
-	~MyDB_PageHandleBase ();
+	~MyDB_Page ();
 
 	// FEEL FREE TO ADD ADDITIONAL PUBLIC METHODS
 
-    MyDB_PageHandleBase ();
+    MyDB_Page ();
+
+	void readBytesIntoBuf();
+
+    void writeBack();
+
+    void printHandle();
 
 private:
 

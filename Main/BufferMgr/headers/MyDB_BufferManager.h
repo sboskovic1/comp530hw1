@@ -6,6 +6,7 @@
 #include "MyDB_LRUNode.h"
 #include "MyDB_TempFile.h"
 #include "MyDB_Table.h"
+#include "MyDB_Page.h"
 #include <unordered_map>
 #include <fstream>
 
@@ -24,7 +25,7 @@ public:
     int pinned;
 
     vector<int> freePages;
-    unordered_map<MyDB_TablePtr, unordered_map<long, MyDB_PageHandle>> table; // Maps table and page index to page handle
+    unordered_map<MyDB_TablePtr, unordered_map<long, MyDB_Page>> table; // Maps table and page index to page handle
 
 	// THESE METHODS MUST APPEAR AND THE PROTOTYPES CANNOT CHANGE!
 
