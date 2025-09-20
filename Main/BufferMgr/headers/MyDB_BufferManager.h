@@ -25,7 +25,7 @@ public:
     int pinned;
 
     vector<int> freePages;
-    unordered_map<MyDB_TablePtr, unordered_map<long, MyDB_Page>> table; // Maps table and page index to page handle
+    unordered_map<MyDB_TablePtr, unordered_map<long, MyDB_Page *>> table; // Maps table and page index to page handle
 
 	// THESE METHODS MUST APPEAR AND THE PROTOTYPES CANNOT CHANGE!
 
@@ -69,15 +69,21 @@ public:
 
     void clear (void * page);
 
-    MyDB_LRUNode * findNode(MyDB_PageHandle pageHandle);
+    MyDB_LRUNode * findNode(MyDB_Page * page);
 
     void printBuffer();
 
-    void push(MyDB_PageHandle pageHandle);
+    void push(MyDB_Page * page);
 
 	void createDiskFile(MyDB_TablePtr whichTable);
 
     void returnPage(void * buf);
+
+    MyDB_Page * buildPage(int pinned, int permanent);
+
+    void removeFromTable(MyDB_TablePtr tablePtr, long idx);
+
+    void removeFromLRU(MyDB_Page * page);
 
 private:
 

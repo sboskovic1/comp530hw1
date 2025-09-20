@@ -60,9 +60,12 @@ int main () {
 		vector <MyDB_PageHandle> myHandles;
 		for (int i = 1; i < 10; i++) {
 			cout << "allocating pinned page\n";
+            cout << myMgr.freePages.size() << " free pages after pinning " << i + 1 << " pages" << endl;
 			MyDB_PageHandle temp = myMgr.getPinnedPage (table1, i);
+            cout << "Got pinned page " << i << endl;
 			char *bytes = (char *) temp->getBytes ();
 			writeNums (bytes, 64, i);
+            cout << "Writing symbols to page " << i << endl;
 			temp->wroteBytes ();
 			myHandles.push_back (temp);
 		}
@@ -77,7 +80,7 @@ int main () {
 
 		// now remember 8 more pages
 		for (int i = 0; i < 8; i++) {
-			cout << "allocating pinned page\n";
+			cout << "allocating pinned page" << endl;
 			MyDB_PageHandle temp = myMgr.getPinnedPage (table1, i);
 			char *bytes = (char *) temp->getBytes ();
 
@@ -88,10 +91,11 @@ int main () {
 				writeSymbols (bytes, 64, i);
 			temp->wroteBytes ();
 			myHandles.push_back (temp);
+            std::cout << myMgr.freePages.size() << " free pages after pinning " << i + 1 << " pages" << std::endl;
 		}
 
 		// now correctly write nums at the 0th position
-		cout << "allocating unpinned page\n";
+		cout << "allocating unpinned page" << endl;
 		MyDB_PageHandle anotherDude = myMgr.getPage (table1, 0);
 		bytes = (char *) anotherDude->getBytes ();
 		writeSymbols (bytes, 64, 0);
@@ -112,13 +116,14 @@ int main () {
 		myHandles = temp2;
 
 		// now get a pair of pages and write them
+        std::cout << myMgr.freePages.size() << " free pages before pinning 100 pages" << std::endl;
 		for (int i = 0; i < 100; i++) {
-			cout << "allocating pinned page\n";
+			cout << "allocating pinned page" << endl; 
 			MyDB_PageHandle oneHandle = myMgr.getPinnedPage ();
 			char *bytes = (char *) oneHandle->getBytes ();
 			writeNums (bytes, 64, i);
 			oneHandle->wroteBytes ();
-			cout << "allocating pinned page\n";
+            cout << "allocating pinned page 2" << endl;
 			MyDB_PageHandle twoHandle = myMgr.getPinnedPage ();
 			writeNums (bytes, 64, i);
 			twoHandle->wroteBytes ();
@@ -127,9 +132,11 @@ int main () {
 		// make a second table
 		MyDB_TablePtr table2 = make_shared <MyDB_Table> ("tempTable2", "barfoo");
 		for (int i = 0; i < 100; i++) {
-			cout << "allocating unpinned page\n";
+			cout << "allocating unpinned page" << endl;
 			MyDB_PageHandle temp = myMgr.getPage (table2, i);
+            cout << "Got page " << i << " for table 2" << endl;
 			char *bytes = (char *) temp->getBytes ();
+            cout << "got bytes " << i << " for table 2" << endl;
 			writeLetters (bytes, 64, i);
 			temp->wroteBytes ();
 		}

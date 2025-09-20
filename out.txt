@@ -1,25 +1,5894 @@
 allocating pinned page
+Loading page 0 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
 allocating pinned page
+15 free pages after pinning 2 pages
+Got pinned page 1
+Loading page 1 from disk
+Got buffer space at 0xeb2f40
+Read bytes into buffer
+Writing symbols to page 1
 allocating pinned page
+14 free pages after pinning 3 pages
+Got pinned page 2
+Loading page 2 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Writing symbols to page 2
 allocating pinned page
+13 free pages after pinning 4 pages
+Got pinned page 3
+Loading page 3 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Writing symbols to page 3
 allocating pinned page
+12 free pages after pinning 5 pages
+Got pinned page 4
+Loading page 4 from disk
+Got buffer space at 0xeb3000
+Read bytes into buffer
+Writing symbols to page 4
 allocating pinned page
+11 free pages after pinning 6 pages
+Got pinned page 5
+Loading page 5 from disk
+Got buffer space at 0xeb3040
+Read bytes into buffer
+Writing symbols to page 5
 allocating pinned page
+10 free pages after pinning 7 pages
+Got pinned page 6
+Loading page 6 from disk
+Got buffer space at 0xeb3080
+Read bytes into buffer
+Writing symbols to page 6
 allocating pinned page
+9 free pages after pinning 8 pages
+Got pinned page 7
+Loading page 7 from disk
+Got buffer space at 0xeb30c0
+Read bytes into buffer
+Writing symbols to page 7
 allocating pinned page
+8 free pages after pinning 9 pages
+Got pinned page 8
+Loading page 8 from disk
+Got buffer space at 0xeb3100
+Read bytes into buffer
+Writing symbols to page 8
 allocating pinned page
+7 free pages after pinning 10 pages
+Got pinned page 9
+Loading page 9 from disk
+Got buffer space at 0xeb3140
+Read bytes into buffer
+Writing symbols to page 9
 6 free pages after pinning 10 pages
-6 free pages after unpinning 10 pages
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 1 to free list (0xeb2f40 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 4 to free list (0xeb3000 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 5 to free list (0xeb3040 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 6 to free list (0xeb3080 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 7 to free list (0xeb30c0 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 8 to free list (0xeb3100 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 9 to free list (0xeb3140 , 0xeb2f00)
+15 free pages after unpinning 10 pages
 allocating pinned page
+15 free pages after pinning 1 pages
 allocating pinned page
+Loading page 1 from disk
+Got buffer space at 0xeb3140
+Read bytes into buffer
+14 free pages after pinning 2 pages
 allocating pinned page
+Loading page 2 from disk
+Got buffer space at 0xeb3100
+Read bytes into buffer
+13 free pages after pinning 3 pages
 allocating pinned page
+Loading page 3 from disk
+Got buffer space at 0xeb30c0
+Read bytes into buffer
+12 free pages after pinning 4 pages
 allocating pinned page
+Loading page 4 from disk
+Got buffer space at 0xeb3080
+Read bytes into buffer
+11 free pages after pinning 5 pages
 allocating pinned page
+Loading page 5 from disk
+Got buffer space at 0xeb3040
+Read bytes into buffer
+10 free pages after pinning 6 pages
 allocating pinned page
+Loading page 6 from disk
+Got buffer space at 0xeb3000
+Read bytes into buffer
+9 free pages after pinning 7 pages
 allocating pinned page
+Loading page 7 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+8 free pages after pinning 8 pages
 allocating unpinned page
+Page already exists, returning existing handle
 allocating unpinned page
 Getting page 10
+Loading page 10 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb62f0
+Found node: 0xeb62f0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb62f0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
 allocating unpinned page
 Getting page 11
+Loading page 11 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6220
+Found node: 0xeb6220
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6220
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 12
+Loading page 12 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6240
+Found node: 0xeb6240
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6240
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 13
+Loading page 13 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6260
+Found node: 0xeb6260
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6260
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 14
+Loading page 14 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6280
+Found node: 0xeb6280
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6280
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 15
+Loading page 15 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb62a0
+Found node: 0xeb62a0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb62a0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 16
+Loading page 16 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb62c0
+Found node: 0xeb62c0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb62c0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 17
+Loading page 17 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6590
+Found node: 0xeb6590
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6590
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 18
+Loading page 18 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb65b0
+Found node: 0xeb65b0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb65b0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 19
+Loading page 19 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb65d0
+Found node: 0xeb65d0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb65d0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 20
+Loading page 20 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb65f0
+Found node: 0xeb65f0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb65f0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 21
+Loading page 21 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6610
+Found node: 0xeb6610
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6610
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 22
+Loading page 22 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6630
+Found node: 0xeb6630
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6630
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 23
+Loading page 23 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6650
+Found node: 0xeb6650
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6650
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 24
+Loading page 24 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6670
+Found node: 0xeb6670
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6670
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 25
+Loading page 25 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6690
+Found node: 0xeb6690
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6690
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 26
+Loading page 26 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb66b0
+Found node: 0xeb66b0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb66b0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 27
+Loading page 27 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb66d0
+Found node: 0xeb66d0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb66d0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 28
+Loading page 28 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb66f0
+Found node: 0xeb66f0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb66f0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 29
+Loading page 29 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6710
+Found node: 0xeb6710
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6710
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 30
+Loading page 30 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6730
+Found node: 0xeb6730
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6730
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 31
+Loading page 31 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6750
+Found node: 0xeb6750
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6750
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 32
+Loading page 32 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6770
+Found node: 0xeb6770
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6770
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 33
+Loading page 33 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6790
+Found node: 0xeb6790
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6790
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 34
+Loading page 34 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb67b0
+Found node: 0xeb67b0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb67b0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 35
+Loading page 35 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb67d0
+Found node: 0xeb67d0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb67d0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 36
+Loading page 36 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb67f0
+Found node: 0xeb67f0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb67f0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 37
+Loading page 37 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6810
+Found node: 0xeb6810
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6810
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 38
+Loading page 38 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6830
+Found node: 0xeb6830
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6830
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 39
+Loading page 39 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6850
+Found node: 0xeb6850
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6850
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 40
+Loading page 40 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6870
+Found node: 0xeb6870
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6870
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 41
+Loading page 41 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6890
+Found node: 0xeb6890
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6890
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 42
+Loading page 42 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb68b0
+Found node: 0xeb68b0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb68b0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 43
+Loading page 43 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb68d0
+Found node: 0xeb68d0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb68d0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 44
+Loading page 44 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb68f0
+Found node: 0xeb68f0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb68f0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 45
+Loading page 45 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6910
+Found node: 0xeb6910
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6910
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 46
+Loading page 46 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6930
+Found node: 0xeb6930
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6930
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 47
+Loading page 47 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6950
+Found node: 0xeb6950
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6950
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 48
+Loading page 48 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6970
+Found node: 0xeb6970
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6970
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 49
+Loading page 49 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6990
+Found node: 0xeb6990
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6990
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 50
+Loading page 50 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb69b0
+Found node: 0xeb69b0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb69b0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 51
+Loading page 51 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb69d0
+Found node: 0xeb69d0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb69d0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 52
+Loading page 52 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb69f0
+Found node: 0xeb69f0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb69f0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 53
+Loading page 53 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6a10
+Found node: 0xeb6a10
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6a10
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 54
+Loading page 54 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6a30
+Found node: 0xeb6a30
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6a30
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 55
+Loading page 55 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6a50
+Found node: 0xeb6a50
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6a50
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 56
+Loading page 56 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6a70
+Found node: 0xeb6a70
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6a70
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 57
+Loading page 57 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6a90
+Found node: 0xeb6a90
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6a90
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 58
+Loading page 58 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6ab0
+Found node: 0xeb6ab0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6ab0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 59
+Loading page 59 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6ad0
+Found node: 0xeb6ad0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6ad0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 60
+Loading page 60 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6af0
+Found node: 0xeb6af0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6af0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 61
+Loading page 61 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6b10
+Found node: 0xeb6b10
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6b10
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 62
+Loading page 62 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6b30
+Found node: 0xeb6b30
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6b30
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 63
+Loading page 63 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6b50
+Found node: 0xeb6b50
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6b50
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 64
+Loading page 64 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6b70
+Found node: 0xeb6b70
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6b70
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 65
+Loading page 65 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6b90
+Found node: 0xeb6b90
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6b90
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 66
+Loading page 66 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6bb0
+Found node: 0xeb6bb0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6bb0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 67
+Loading page 67 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6bd0
+Found node: 0xeb6bd0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6bd0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 68
+Loading page 68 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6bf0
+Found node: 0xeb6bf0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6bf0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 69
+Loading page 69 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6c10
+Found node: 0xeb6c10
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6c10
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 70
+Loading page 70 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6c30
+Found node: 0xeb6c30
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6c30
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 71
+Loading page 71 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6c50
+Found node: 0xeb6c50
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6c50
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 72
+Loading page 72 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6c70
+Found node: 0xeb6c70
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6c70
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 73
+Loading page 73 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6c90
+Found node: 0xeb6c90
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6c90
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 74
+Loading page 74 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6cb0
+Found node: 0xeb6cb0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6cb0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 75
+Loading page 75 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6cd0
+Found node: 0xeb6cd0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6cd0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 76
+Loading page 76 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6cf0
+Found node: 0xeb6cf0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6cf0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 77
+Loading page 77 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6d10
+Found node: 0xeb6d10
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6d10
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 78
+Loading page 78 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6d30
+Found node: 0xeb6d30
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6d30
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 79
+Loading page 79 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6d50
+Found node: 0xeb6d50
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6d50
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 80
+Loading page 80 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6d70
+Found node: 0xeb6d70
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6d70
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 81
+Loading page 81 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6d90
+Found node: 0xeb6d90
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6d90
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 82
+Loading page 82 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6db0
+Found node: 0xeb6db0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6db0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 83
+Loading page 83 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6dd0
+Found node: 0xeb6dd0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6dd0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 84
+Loading page 84 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6df0
+Found node: 0xeb6df0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6df0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 85
+Loading page 85 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6e10
+Found node: 0xeb6e10
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6e10
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 86
+Loading page 86 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6e30
+Found node: 0xeb6e30
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6e30
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 87
+Loading page 87 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6e50
+Found node: 0xeb6e50
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6e50
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 88
+Loading page 88 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6e70
+Found node: 0xeb6e70
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6e70
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 89
+Loading page 89 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6e90
+Found node: 0xeb6e90
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6e90
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 90
+Loading page 90 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6eb0
+Found node: 0xeb6eb0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6eb0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 91
+Loading page 91 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6ed0
+Found node: 0xeb6ed0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6ed0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 92
+Loading page 92 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6ef0
+Found node: 0xeb6ef0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6ef0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 93
+Loading page 93 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6f10
+Found node: 0xeb6f10
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6f10
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 94
+Loading page 94 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6f30
+Found node: 0xeb6f30
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6f30
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 95
+Loading page 95 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6f50
+Found node: 0xeb6f50
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6f50
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 96
+Loading page 96 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6f70
+Found node: 0xeb6f70
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6f70
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 97
+Loading page 97 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6f90
+Found node: 0xeb6f90
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6f90
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 98
+Loading page 98 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6fb0
+Found node: 0xeb6fb0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6fb0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+allocating unpinned page
+Getting page 99
+Loading page 99 from disk
+Got buffer space at 0xeb2f80
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Push called
+0xeb6fd0
+Found node: 0xeb6fd0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6fd0
+Ejecting node from LRU
+Returning page 2 to free list (0xeb2f80 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 9 to free list (0xeb3140 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 8 to free list (0xeb3100 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 7 to free list (0xeb30c0 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 6 to free list (0xeb3080 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 5 to free list (0xeb3040 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 4 to free list (0xeb3000 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+15 free pages before pinning 100 pages
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating pinned page
+Loading page 0 from temp file
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+allocating pinned page 2
+Error: wroteBytes called on inactive page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+starting second table test case
+15 free pages before second table test
+allocating unpinned page
+Got page 0 for table 2
+Loading page 0 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 0 for table 2
+Push called
+0xeb5ca0
+Found node: 0xeb5ca0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb5ca0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 1 for table 2
+Loading page 1 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 1 for table 2
+Push called
+0xeb5e10
+Found node: 0xeb5e10
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb5e10
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 2 for table 2
+Loading page 2 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 2 for table 2
+Push called
+0xeb6010
+Found node: 0xeb6010
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6010
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 3 for table 2
+Loading page 3 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 3 for table 2
+Push called
+0xeb6180
+Found node: 0xeb6180
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6180
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 4 for table 2
+Loading page 4 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 4 for table 2
+Push called
+0xeb6460
+Found node: 0xeb6460
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6460
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 5 for table 2
+Loading page 5 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 5 for table 2
+Push called
+0xeb3330
+Found node: 0xeb3330
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb3330
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 6 for table 2
+Loading page 6 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 6 for table 2
+Push called
+0xeb57d0
+Found node: 0xeb57d0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb57d0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 7 for table 2
+Loading page 7 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 7 for table 2
+Push called
+0xeb57f0
+Found node: 0xeb57f0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb57f0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 8 for table 2
+Loading page 8 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 8 for table 2
+Push called
+0xeb7060
+Found node: 0xeb7060
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7060
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 9 for table 2
+Loading page 9 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 9 for table 2
+Push called
+0xeb7080
+Found node: 0xeb7080
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7080
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 10 for table 2
+Loading page 10 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 10 for table 2
+Push called
+0xeb70a0
+Found node: 0xeb70a0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb70a0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 11 for table 2
+Loading page 11 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 11 for table 2
+Push called
+0xeb70c0
+Found node: 0xeb70c0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb70c0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 12 for table 2
+Loading page 12 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 12 for table 2
+Push called
+0xeb70e0
+Found node: 0xeb70e0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb70e0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 13 for table 2
+Loading page 13 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 13 for table 2
+Push called
+0xeb7100
+Found node: 0xeb7100
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7100
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 14 for table 2
+Loading page 14 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 14 for table 2
+Push called
+0xeb7120
+Found node: 0xeb7120
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7120
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 15 for table 2
+Loading page 15 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 15 for table 2
+Push called
+0xeb7140
+Found node: 0xeb7140
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7140
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 16 for table 2
+Loading page 16 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 16 for table 2
+Push called
+0xeb7160
+Found node: 0xeb7160
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7160
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 17 for table 2
+Loading page 17 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 17 for table 2
+Push called
+0xeb7180
+Found node: 0xeb7180
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7180
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 18 for table 2
+Loading page 18 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 18 for table 2
+Push called
+0xeb71a0
+Found node: 0xeb71a0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb71a0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 19 for table 2
+Loading page 19 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 19 for table 2
+Push called
+0xeb71c0
+Found node: 0xeb71c0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb71c0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 20 for table 2
+Loading page 20 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 20 for table 2
+Push called
+0xeb71e0
+Found node: 0xeb71e0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb71e0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 21 for table 2
+Loading page 21 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 21 for table 2
+Push called
+0xeb7200
+Found node: 0xeb7200
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7200
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 22 for table 2
+Loading page 22 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 22 for table 2
+Push called
+0xeb7220
+Found node: 0xeb7220
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7220
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 23 for table 2
+Loading page 23 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 23 for table 2
+Push called
+0xeb7240
+Found node: 0xeb7240
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7240
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 24 for table 2
+Loading page 24 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 24 for table 2
+Push called
+0xeb7260
+Found node: 0xeb7260
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7260
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 25 for table 2
+Loading page 25 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 25 for table 2
+Push called
+0xeb7280
+Found node: 0xeb7280
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7280
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 26 for table 2
+Loading page 26 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 26 for table 2
+Push called
+0xeb72a0
+Found node: 0xeb72a0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb72a0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 27 for table 2
+Loading page 27 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 27 for table 2
+Push called
+0xeb72c0
+Found node: 0xeb72c0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb72c0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 28 for table 2
+Loading page 28 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 28 for table 2
+Push called
+0xeb72e0
+Found node: 0xeb72e0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb72e0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 29 for table 2
+Loading page 29 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 29 for table 2
+Push called
+0xeb7300
+Found node: 0xeb7300
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7300
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 30 for table 2
+Loading page 30 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 30 for table 2
+Push called
+0xeb7320
+Found node: 0xeb7320
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7320
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 31 for table 2
+Loading page 31 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 31 for table 2
+Push called
+0xeb7340
+Found node: 0xeb7340
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7340
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 32 for table 2
+Loading page 32 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 32 for table 2
+Push called
+0xeb7360
+Found node: 0xeb7360
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7360
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 33 for table 2
+Loading page 33 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 33 for table 2
+Push called
+0xeb7380
+Found node: 0xeb7380
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7380
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 34 for table 2
+Loading page 34 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 34 for table 2
+Push called
+0xeb73a0
+Found node: 0xeb73a0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb73a0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 35 for table 2
+Loading page 35 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 35 for table 2
+Push called
+0xeb73c0
+Found node: 0xeb73c0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb73c0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 36 for table 2
+Loading page 36 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 36 for table 2
+Push called
+0xeb73e0
+Found node: 0xeb73e0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb73e0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 37 for table 2
+Loading page 37 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 37 for table 2
+Push called
+0xeb7400
+Found node: 0xeb7400
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7400
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 38 for table 2
+Loading page 38 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 38 for table 2
+Push called
+0xeb7420
+Found node: 0xeb7420
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7420
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 39 for table 2
+Loading page 39 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 39 for table 2
+Push called
+0xeb7440
+Found node: 0xeb7440
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7440
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 40 for table 2
+Loading page 40 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 40 for table 2
+Push called
+0xeb7460
+Found node: 0xeb7460
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7460
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 41 for table 2
+Loading page 41 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 41 for table 2
+Push called
+0xeb7480
+Found node: 0xeb7480
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7480
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 42 for table 2
+Loading page 42 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 42 for table 2
+Push called
+0xeb74a0
+Found node: 0xeb74a0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb74a0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 43 for table 2
+Loading page 43 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 43 for table 2
+Push called
+0xeb74c0
+Found node: 0xeb74c0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb74c0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 44 for table 2
+Loading page 44 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 44 for table 2
+Push called
+0xeb74e0
+Found node: 0xeb74e0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb74e0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 45 for table 2
+Loading page 45 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 45 for table 2
+Push called
+0xeb7500
+Found node: 0xeb7500
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7500
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 46 for table 2
+Loading page 46 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 46 for table 2
+Push called
+0xeb7520
+Found node: 0xeb7520
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7520
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 47 for table 2
+Loading page 47 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 47 for table 2
+Push called
+0xeb7540
+Found node: 0xeb7540
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7540
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 48 for table 2
+Loading page 48 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 48 for table 2
+Push called
+0xeb7560
+Found node: 0xeb7560
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7560
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 49 for table 2
+Loading page 49 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 49 for table 2
+Push called
+0xeb7580
+Found node: 0xeb7580
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7580
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 50 for table 2
+Loading page 50 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 50 for table 2
+Push called
+0xeb75a0
+Found node: 0xeb75a0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb75a0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 51 for table 2
+Loading page 51 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 51 for table 2
+Push called
+0xeb75c0
+Found node: 0xeb75c0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb75c0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 52 for table 2
+Loading page 52 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 52 for table 2
+Push called
+0xeb75e0
+Found node: 0xeb75e0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb75e0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 53 for table 2
+Loading page 53 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 53 for table 2
+Push called
+0xeb7600
+Found node: 0xeb7600
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7600
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 54 for table 2
+Loading page 54 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 54 for table 2
+Push called
+0xeb7620
+Found node: 0xeb7620
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7620
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 55 for table 2
+Loading page 55 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 55 for table 2
+Push called
+0xeb7640
+Found node: 0xeb7640
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7640
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 56 for table 2
+Loading page 56 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 56 for table 2
+Push called
+0xeb7660
+Found node: 0xeb7660
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7660
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 57 for table 2
+Loading page 57 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 57 for table 2
+Push called
+0xeb7680
+Found node: 0xeb7680
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7680
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 58 for table 2
+Loading page 58 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 58 for table 2
+Push called
+0xeb76a0
+Found node: 0xeb76a0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb76a0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 59 for table 2
+Loading page 59 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 59 for table 2
+Push called
+0xeb76c0
+Found node: 0xeb76c0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb76c0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 60 for table 2
+Loading page 60 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 60 for table 2
+Push called
+0xeb76e0
+Found node: 0xeb76e0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb76e0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 61 for table 2
+Loading page 61 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 61 for table 2
+Push called
+0xeb7700
+Found node: 0xeb7700
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7700
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 62 for table 2
+Loading page 62 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 62 for table 2
+Push called
+0xeb7720
+Found node: 0xeb7720
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7720
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 63 for table 2
+Loading page 63 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 63 for table 2
+Push called
+0xeb7740
+Found node: 0xeb7740
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7740
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 64 for table 2
+Loading page 64 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 64 for table 2
+Push called
+0xeb7760
+Found node: 0xeb7760
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7760
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 65 for table 2
+Loading page 65 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 65 for table 2
+Push called
+0xeb7780
+Found node: 0xeb7780
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7780
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 66 for table 2
+Loading page 66 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 66 for table 2
+Push called
+0xeb77a0
+Found node: 0xeb77a0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb77a0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 67 for table 2
+Loading page 67 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 67 for table 2
+Push called
+0xeb77c0
+Found node: 0xeb77c0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb77c0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 68 for table 2
+Loading page 68 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 68 for table 2
+Push called
+0xeb77e0
+Found node: 0xeb77e0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb77e0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 69 for table 2
+Loading page 69 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 69 for table 2
+Push called
+0xeb7800
+Found node: 0xeb7800
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7800
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 70 for table 2
+Loading page 70 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 70 for table 2
+Push called
+0xeb7820
+Found node: 0xeb7820
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7820
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 71 for table 2
+Loading page 71 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 71 for table 2
+Push called
+0xeb7840
+Found node: 0xeb7840
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7840
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 72 for table 2
+Loading page 72 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 72 for table 2
+Push called
+0xeb7860
+Found node: 0xeb7860
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7860
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 73 for table 2
+Loading page 73 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 73 for table 2
+Push called
+0xeb7880
+Found node: 0xeb7880
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7880
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 74 for table 2
+Loading page 74 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 74 for table 2
+Push called
+0xeb78a0
+Found node: 0xeb78a0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb78a0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 75 for table 2
+Loading page 75 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 75 for table 2
+Push called
+0xeb78c0
+Found node: 0xeb78c0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb78c0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 76 for table 2
+Loading page 76 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 76 for table 2
+Push called
+0xeb78e0
+Found node: 0xeb78e0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb78e0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 77 for table 2
+Loading page 77 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 77 for table 2
+Push called
+0xeb7900
+Found node: 0xeb7900
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7900
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 78 for table 2
+Loading page 78 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 78 for table 2
+Push called
+0xeb7920
+Found node: 0xeb7920
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7920
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 79 for table 2
+Loading page 79 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 79 for table 2
+Push called
+0xeb7940
+Found node: 0xeb7940
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7940
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 80 for table 2
+Loading page 80 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 80 for table 2
+Push called
+0xeb7960
+Found node: 0xeb7960
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7960
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 81 for table 2
+Loading page 81 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 81 for table 2
+Push called
+0xeb7980
+Found node: 0xeb7980
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7980
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 82 for table 2
+Loading page 82 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 82 for table 2
+Push called
+0xeb79a0
+Found node: 0xeb79a0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb79a0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 83 for table 2
+Loading page 83 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 83 for table 2
+Push called
+0xeb79c0
+Found node: 0xeb79c0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb79c0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 84 for table 2
+Loading page 84 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 84 for table 2
+Push called
+0xeb79e0
+Found node: 0xeb79e0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb79e0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 85 for table 2
+Loading page 85 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 85 for table 2
+Push called
+0xeb7a00
+Found node: 0xeb7a00
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7a00
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 86 for table 2
+Loading page 86 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 86 for table 2
+Push called
+0xeb7a20
+Found node: 0xeb7a20
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7a20
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 87 for table 2
+Loading page 87 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 87 for table 2
+Push called
+0xeb7a40
+Found node: 0xeb7a40
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7a40
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 88 for table 2
+Loading page 88 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 88 for table 2
+Push called
+0xeb7a60
+Found node: 0xeb7a60
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7a60
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 89 for table 2
+Loading page 89 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 89 for table 2
+Push called
+0xeb7a80
+Found node: 0xeb7a80
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7a80
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 90 for table 2
+Loading page 90 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 90 for table 2
+Push called
+0xeb7aa0
+Found node: 0xeb7aa0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7aa0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 91 for table 2
+Loading page 91 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 91 for table 2
+Push called
+0xeb7ac0
+Found node: 0xeb7ac0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7ac0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 92 for table 2
+Loading page 92 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 92 for table 2
+Push called
+0xeb7ae0
+Found node: 0xeb7ae0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7ae0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 93 for table 2
+Loading page 93 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 93 for table 2
+Push called
+0xeb7b00
+Found node: 0xeb7b00
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7b00
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 94 for table 2
+Loading page 94 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 94 for table 2
+Push called
+0xeb7b20
+Found node: 0xeb7b20
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7b20
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 95 for table 2
+Loading page 95 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 95 for table 2
+Push called
+0xeb7b40
+Found node: 0xeb7b40
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7b40
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 96 for table 2
+Loading page 96 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 96 for table 2
+Push called
+0xeb7b60
+Found node: 0xeb7b60
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7b60
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 97 for table 2
+Loading page 97 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 97 for table 2
+Push called
+0xeb7b80
+Found node: 0xeb7b80
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7b80
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 98 for table 2
+Loading page 98 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 98 for table 2
+Push called
+0xeb7ba0
+Found node: 0xeb7ba0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7ba0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+allocating unpinned page
+Got page 99 for table 2
+Loading page 99 from disk
+Got buffer space at 0xeb2fc0
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+got bytes 99 for table 2
+Push called
+0xeb7bc0
+Found node: 0xeb7bc0
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb7bc0
+Ejecting node from LRU
+Returning page 3 to free list (0xeb2fc0 , 0xeb2f00)
+Destructor called for page with ref count: 0
+destructor called successfully for page
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+Destroying Buffer Manager
+Loading page 0 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb5820
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 1 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb5990
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 2 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb64d0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 3 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb64f0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 4 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6510
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 5 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6530
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 6 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6550
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 7 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb6570
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 8 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb5480
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 9 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb54a0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 10 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb54c0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 11 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb54e0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 12 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb5500
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 13 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb5520
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 14 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb5540
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 15 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb5560
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 16 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8000
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 17 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8020
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 18 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8040
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 19 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8060
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 20 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8080
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 21 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb80a0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 22 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb80c0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 23 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb80e0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 24 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8100
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 25 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8120
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 26 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8140
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 27 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8160
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 28 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8180
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 29 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb81a0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 30 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb81c0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 31 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb81e0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 32 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8200
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 33 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8220
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 34 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8240
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 35 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8260
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 36 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8280
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 37 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb82a0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 38 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb82c0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 39 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb82e0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 40 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8300
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 41 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8320
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 42 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8340
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 43 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8360
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 44 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8380
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 45 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb83a0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 46 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb83c0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 47 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb83e0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 48 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8400
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 49 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8420
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 50 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8440
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 51 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8460
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 52 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8480
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 53 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb84a0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 54 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb84c0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 55 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb84e0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 56 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8500
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 57 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8520
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 58 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8540
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 59 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8560
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 60 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8580
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 61 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb85a0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 62 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb85c0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 63 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb85e0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 64 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8600
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 65 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8620
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 66 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8640
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 67 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8660
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 68 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8680
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 69 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb86a0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 70 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb86c0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 71 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb86e0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 72 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8700
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 73 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8720
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 74 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8740
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 75 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8760
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 76 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8780
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 77 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb87a0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 78 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb87c0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 79 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb87e0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 80 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8800
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 81 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8820
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 82 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8840
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 83 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8860
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 84 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8880
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 85 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb88a0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 86 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb88c0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 87 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb88e0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 88 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8900
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 89 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8920
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 90 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8940
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 91 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8960
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 92 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8980
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 93 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb89a0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 94 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb89c0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 95 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb89e0
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 96 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8a00
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 97 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8a20
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 98 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8a40
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Loading page 99 from disk
+Got buffer space at 0xeb2f00
+Read bytes into buffer
+Pushing page to front of LRU
+Push called
+Found node: 0
+Pushing new node to LRU
+Destructor called for page with ref count: 0
+destructor called successfully for page
+0xeb8a60
+Ejecting node from LRU
+Returning page 0 to free list (0xeb2f00 , 0xeb2f00)
+this page is not dirty, not writing to disk
+Destroying Buffer Manager

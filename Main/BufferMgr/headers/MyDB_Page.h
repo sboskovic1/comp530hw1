@@ -45,6 +45,9 @@ public:
     std::function<void*()> getBufferSpace; // Passed down from buffer manager to request buffer space
     std::function<void()> pushNode; // Passed down from buffer manager to push node to front of LRU
     std::function<void(void*)> giveBack; // Return a page upon destruction
+    std::function<void(MyDB_TablePtr, long)> removeFromTable; // Write back to disk or temp file
+    std::function<void()> decrementPinned; // Decrement pinned count
+    std::function<void(MyDB_Page*)> removeFromLRU; // Remove dead node from LRU cache
 
     Location location; // location of page
 

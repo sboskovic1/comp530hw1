@@ -13,7 +13,7 @@
 using namespace std;
 
 void *MyDB_PageHandleBase :: getBytes () {
-    this->page->getBytes();
+    return this->page->getBytes();
 }
 
 void MyDB_PageHandleBase :: wroteBytes () {
@@ -22,6 +22,13 @@ void MyDB_PageHandleBase :: wroteBytes () {
 
 MyDB_PageHandleBase :: ~MyDB_PageHandleBase () {
     this->page->refCount--;
+    if (this->page->refCount == 0) {
+        delete this->page;
+    }
+}
+
+MyDB_PageHandleBase :: MyDB_PageHandleBase () {
+    this->page = nullptr;
 }
 
 

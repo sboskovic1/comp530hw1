@@ -1,0 +1,5 @@
+*.o
+run.sh
+test.sh
+out.txt
+run.sh

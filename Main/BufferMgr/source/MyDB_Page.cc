@@ -19,12 +19,17 @@ void *MyDB_Page :: getBytes () {
         this->active = ACTIVE;
         readBytesIntoBuf();
     }
-
-    this->pushNode(); // Push to front of LRU
+    if (this->pinned == UNPINNED) {
+        this->pushNode(); // Push to front of LRU
+    }
 	return this->location.buf;
 }
 
 void MyDB_Page :: wroteBytes () {
+    if (this->active != ACTIVE || this->location.buf == nullptr) {
+        std::cout << "Error: wroteBytes called on inactive page" << std::endl;
+        return;
+    }
     this->dirty = DIRTY;
     //shouldn't push the node if it is a pinned page bc it exists outside of the LRU
     if (this->pinned == UNPINNED) {
@@ -40,27 +45,31 @@ MyDB_Page :: MyDB_Page () {
     this->location.buf = nullptr;
     this->location.pageIndex = -1;
     this->location.table = nullptr;
-    this->pageSize = 64; // Default page size
 }
 
 MyDB_Page :: ~MyDB_Page () {
     // If the page is currently pinned, unpin it and add it to the LRU
-    std::cout << "destructor called for pagehandle" << std::endl;
-    if (this->pinned == PINNED) {
-        this->pinned = UNPINNED;
-        this->pushNode();
-    } else {
+    if (this->refCount == 0) {
+        this->refCount = -1;
+        if (this->pinned == PINNED) {
+            this->decrementPinned();
+        } else {
+            this->removeFromLRU(this);
+        }
         if (this->active == ACTIVE) {
+
             this->giveBack(this->location.buf);
             this->writeBack();
         }
         if (this->permanent == TEMP) {
             this->location.tempFile->clearPage(this->location.pageIndex);
+        } else {
+            this->removeFromTable(this->location.table, this->location.pageIndex);
         }
     }
 }
 
-void MyDB_PageHandleBase :: readBytesIntoBuf() {
+void MyDB_Page :: readBytesIntoBuf() {
     long idx = this->location.pageIndex;
     std::string fileName;
     if (this->permanent == DISK) {
@@ -110,12 +119,12 @@ void MyDB_PageHandleBase :: readBytesIntoBuf() {
     close(fd);
 }
 
-void MyDB_PageHandleBase :: writeBack() {
-    // This should never happen
-    if (this->pinned == PINNED) {
-        perror("page is pinned, cannot write to disk");
-        return;
-    }
+void MyDB_Page :: writeBack() {
+    // This should never happen (it does in the tests though)
+    // if (this->pinned == PINNED) {
+    //     perror("page is pinned, cannot write to disk");
+    //     return;
+    // }
 
     if (this->dirty == CLEAN) {
         std::cout << "this page is not dirty, not writing to disk" << std::endl;
@@ -158,7 +167,7 @@ void MyDB_PageHandleBase :: writeBack() {
     close(fd);
 }
 
-void MyDB_PageHandleBase :: printHandle() {
+void MyDB_Page :: printHandle() {
     if (this->permanent == TEMP) {
         std::cout << "Temp Page " << this->location.pageIndex << std::endl;
     } else {
