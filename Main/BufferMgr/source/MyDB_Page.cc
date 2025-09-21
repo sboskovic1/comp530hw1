@@ -127,7 +127,6 @@ void MyDB_Page :: writeBack() {
     // }
 
     if (this->dirty == CLEAN) {
-        std::cout << "this page is not dirty, not writing to disk" << std::endl;
         return;
     }
 
